@@ -1,12 +1,19 @@
 import React from 'react';
 import { StyleProp, ViewStyle } from 'react-native';
-import OnBoardFirst from '../../assets/icons/onboardfirst.svg';
-import OnBoardSecond from '../../assets/icons/onboardsecond.svg';
-import Logo from '../../assets/icons/logo.svg';
-// import Login from '../../assets/icons/login.svg';
-// import Signup from '../../assets/icons/signup.svg';
+import OnBoardFirst from '../../../assets/icons/onboardfirst.svg';
+import OnBoardSecond from '../../../assets/icons/onboardsecond.svg';
+import Logo from '../../../assets/icons/logo.svg';
+import EyeOpen from '../../../assets/icons/eyeOpen.svg';
+import EyeClosed from '../../../assets/icons/eyeClosed.svg';
+import Calendar from '../../../assets/icons/calendar.svg';
 
-type IconName = 'onboardfirst' | 'onboardsecond' | 'logo';
+export type IconName =
+  | 'onboardfirst'
+  | 'onboardsecond'
+  | 'logo'
+  | 'eyeOpen'
+  | 'eyeClosed'
+  | 'calendar';
 
 interface IconProps {
   name: IconName;
@@ -21,6 +28,9 @@ const ICON_MAP: Record<IconName, React.FC<any>> = {
   onboardfirst: OnBoardFirst,
   onboardsecond: OnBoardSecond,
   logo: Logo,
+  eyeOpen: EyeOpen,
+  eyeClosed: EyeClosed,
+  calendar: Calendar,
   // signup: Signup,
 };
 

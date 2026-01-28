@@ -26,7 +26,7 @@ export default function App() {
     <NavigationContainer>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
       <Stack.Navigator screenOptions={{ headerShown: true }}>
-        <Stack.Screen
+        {/* <Stack.Screen
           name={Screens.WelcomeScreen}
           component={WelcomeScreen}
           options={{ headerShown: false }}
@@ -35,7 +35,7 @@ export default function App() {
           name={Screens.GetStartedScreen}
           component={GetStartedScreen}
           options={{ headerShown: false }}
-        />
+        /> */}
         <Stack.Screen
           name="LoginScreen"
           component={LoginScreen}
