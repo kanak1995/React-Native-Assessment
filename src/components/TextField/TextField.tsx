@@ -41,6 +41,9 @@ interface TextFieldProps extends TextInputProps {
 
   /** wrapper style */
   style?: ViewStyle;
+
+  /** error string */
+  error?: string;
 }
 
 const TextField: React.FC<TextFieldProps> = ({
@@ -58,6 +61,7 @@ const TextField: React.FC<TextFieldProps> = ({
   secureTextEntry = false,
   style,
   editable = true,
+  error,
   ...rest
 }) => {
   const [isSecure, setIsSecure] = useState(secureTextEntry);
@@ -107,6 +111,7 @@ const TextField: React.FC<TextFieldProps> = ({
           </TouchableOpacity>
         )}
       </View>
+      {error ? <Text style={styles.errorText}>{error}</Text> : null}
     </View>
   );
 };

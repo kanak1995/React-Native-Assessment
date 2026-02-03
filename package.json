@@ -1,5 +1,5 @@
 {
-  "name": "FinWiseApp",
+  "name": "finwiseapp",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -10,13 +10,16 @@
     "test": "jest"
   },
   "dependencies": {
+    "@react-native-async-storage/async-storage": "^2.2.0",
     "@react-native/new-app-screen": "0.83.1",
-    "@react-navigation/native": "^7.1.27",
+    "@react-navigation/bottom-tabs": "^7.10.1",
+    "@react-navigation/native": "^7.1.28",
     "@react-navigation/native-stack": "^7.9.1",
     "react": "19.2.0",
     "react-native": "0.83.1",
+    "react-native-keyboard-aware-scroll-view": "^0.9.5",
     "react-native-safe-area-context": "^5.6.2",
-    "react-native-screens": "^4.19.0",
+    "react-native-screens": "^4.20.0",
     "react-native-svg": "^15.15.1",
     "react-native-vector-icons": "^10.3.0"
   },
@@ -43,5 +46,19 @@
   },
   "engines": {
     "node": ">=20"
-  }
+  },
+  "description": "This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kanak14/FinWiseApp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/kanak14/FinWiseApp/issues"
+  },
+  "homepage": "https://github.com/kanak14/FinWiseApp#readme"
 }

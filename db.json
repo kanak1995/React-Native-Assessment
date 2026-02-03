@@ -1,0 +1,1786 @@
+{
+  "users": [
+    {
+      "id": "b216",
+      "name": "Kanak",
+      "email": "Kanak@gmail.com",
+      "password": "Kanak@123",
+      "token": "u2xb4qjriifbimrbz8u1hd"
+    }
+  ],
+  "products": [
+    {
+      "id": "p_1001",
+      "title": "Classic Tee",
+      "description": "Super-soft cotton tee with a relaxed fit.",
+      "price": 19.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=1",
+      "images": [
+        "https://picsum.photos/600/600?random=1",
+        "https://picsum.photos/600/600?random=2",
+        "https://picsum.photos/600/600?random=3",
+        "https://picsum.photos/600/600?random=4",
+        "https://picsum.photos/600/600?random=5",
+        "https://picsum.photos/600/600?random=6"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4.4,
+      "reviewsCount": 87,
+      "category": "apparel",
+      "brand": "Acme",
+      "stock": 42
+    },
+    {
+      "id": "p_1002",
+      "title": "Premium Polo Shirt",
+      "description": "Premium fabric polo shirt.",
+      "price": 29.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=61",
+      "images": [
+        "https://picsum.photos/600/600?random=62"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4.6,
+      "reviewsCount": 132,
+      "category": "apparel",
+      "brand": "Acme",
+      "stock": 35
+    },
+    {
+      "id": "p_1003",
+      "title": "Slim Fit Jeans",
+      "description": "Stretchable slim-fit jeans.",
+      "price": 49.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=4",
+      "images": [
+        "https://picsum.photos/600/600?random=4"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "blue",
+          "navy"
+        ],
+        "sizes": [
+          "30",
+          "32",
+          "34",
+          "36"
+        ]
+      },
+      "rating": 4.3,
+      "reviewsCount": 96,
+      "category": "apparel",
+      "brand": "DenimCo",
+      "stock": 28
+    },
+    {
+      "id": "p_1004",
+      "title": "Running Sneakers",
+      "description": "Lightweight running shoes.",
+      "price": 79.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=5",
+      "images": [
+        "https://picsum.photos/600/600?random=63",
+        "https://picsum.photos/600/600?random=64",
+        "https://picsum.photos/600/600?random=65",
+        "https://picsum.photos/600/600?random=66"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "sizes": [
+          "7",
+          "8",
+          "9",
+          "10",
+          "11"
+        ]
+      },
+      "rating": 4.7,
+      "reviewsCount": 210,
+      "category": "shoes",
+      "brand": "FastStep",
+      "stock": 18
+    },
+    {
+      "id": "p_1005",
+      "title": "Casual Canvas Shoes",
+      "description": "Everyday casual shoes.",
+      "price": 39.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=6",
+      "images": [
+        "https://picsum.photos/600/600?random=6"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "sizes": [
+          "7",
+          "8",
+          "9",
+          "10",
+          "11"
+        ]
+      },
+      "rating": 4.2,
+      "reviewsCount": 64,
+      "category": "shoes",
+      "brand": "UrbanWalk",
+      "stock": 22
+    },
+    {
+      "id": "p_1006",
+      "title": "Leather Wallet",
+      "description": "Genuine leather wallet.",
+      "price": 14.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=7",
+      "images": [
+        "https://picsum.photos/600/600?random=7"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "brown",
+          "tan"
+        ],
+        "sizes": []
+      },
+      "rating": 4.1,
+      "reviewsCount": 51,
+      "category": "accessories",
+      "brand": "CarryAll",
+      "stock": 60
+    },
+    {
+      "id": "p_1007",
+      "title": "Analog Wrist Watch",
+      "description": "Stylish analog wrist watch.",
+      "price": 99.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=8",
+      "images": [
+        "https://picsum.photos/600/600?random=8"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "brown",
+          "silver"
+        ],
+        "sizes": []
+      },
+      "rating": 4.8,
+      "reviewsCount": 340,
+      "category": "accessories",
+      "brand": "Timely",
+      "stock": 12
+    },
+    {
+      "id": "p_1008",
+      "title": "Sports Cap",
+      "description": "Breathable sports cap.",
+      "price": 9.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=9",
+      "images": [
+        "https://picsum.photos/600/600?random=9"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": []
+      },
+      "rating": 4,
+      "reviewsCount": 29,
+      "category": "accessories",
+      "brand": "FitWear",
+      "stock": 75
+    },
+    {
+      "id": "p_1009",
+      "title": "Hooded Sweatshirt",
+      "description": "Warm hooded sweatshirt.",
+      "price": 34.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=10",
+      "images": [
+        "https://picsum.photos/600/600?random=10"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "grey",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4.5,
+      "reviewsCount": 118,
+      "category": "apparel",
+      "brand": "CozyWear",
+      "stock": 26
+    },
+    {
+      "id": "p_1010",
+      "title": "Formal Leather Belt",
+      "description": "Classic leather belt.",
+      "price": 12.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=11",
+      "images": [
+        "https://picsum.photos/600/600?random=11"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "brown"
+        ],
+        "sizes": [
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4.2,
+      "reviewsCount": 48,
+      "category": "accessories",
+      "brand": "CarryAll",
+      "stock": 40
+    },
+    {
+      "id": "p_1011",
+      "title": "Denim Jacket",
+      "description": "Classic blue denim jacket.",
+      "price": 59.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=12",
+      "images": [
+        "https://picsum.photos/600/600?random=12"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4.5,
+      "reviewsCount": 142,
+      "category": "apparel",
+      "brand": "DenimCo",
+      "stock": 20
+    },
+    {
+      "id": "p_1012",
+      "title": "White Sneakers",
+      "description": "Minimal everyday sneakers.",
+      "price": 69.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=13",
+      "images": [
+        "https://picsum.photos/600/600?random=13"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4.6,
+      "reviewsCount": 189,
+      "category": "shoes",
+      "brand": "FastStep",
+      "stock": 24
+    },
+    {
+      "id": "p_1013",
+      "title": "Graphic Hoodie",
+      "description": "Printed hoodie with fleece lining.",
+      "price": 44.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=14",
+      "images": [
+        "https://picsum.photos/600/600?random=14"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4.4,
+      "reviewsCount": 96,
+      "category": "apparel",
+      "brand": "CozyWear",
+      "stock": 30
+    },
+    {
+      "id": "p_1014",
+      "title": "Running Shorts",
+      "description": "Lightweight breathable running shorts.",
+      "price": 18.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=15",
+      "images": [
+        "https://picsum.photos/600/600?random=15"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4.2,
+      "reviewsCount": 54,
+      "category": "apparel",
+      "brand": "FitWear",
+      "stock": 55
+    },
+    {
+      "id": "p_1015",
+      "title": "Leather Backpack",
+      "description": "Premium leather travel backpack.",
+      "price": 119.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=16",
+      "images": [
+        "https://picsum.photos/600/600?random=16"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4.7,
+      "reviewsCount": 211,
+      "category": "accessories",
+      "brand": "PackPro",
+      "stock": 10
+    },
+    {
+      "id": "p_1016",
+      "title": "Sports Watch",
+      "description": "Water resistant sports watch.",
+      "price": 129.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=17",
+      "images": [
+        "https://picsum.photos/600/600?random=17"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4.8,
+      "reviewsCount": 320,
+      "category": "accessories",
+      "brand": "Timely",
+      "stock": 15
+    },
+    {
+      "id": "p_1017",
+      "title": "Formal Shirt",
+      "description": "Slim-fit formal office shirt.",
+      "price": 24.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=18",
+      "images": [
+        "https://picsum.photos/600/600?random=18"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4.3,
+      "reviewsCount": 88,
+      "category": "apparel",
+      "brand": "Acme",
+      "stock": 40
+    },
+    {
+      "id": "p_1018",
+      "title": "Casual Loafers",
+      "description": "Comfortable slip-on loafers.",
+      "price": 54.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=19",
+      "images": [
+        "https://picsum.photos/600/600?random=19"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4.4,
+      "reviewsCount": 77,
+      "category": "shoes",
+      "brand": "UrbanWalk",
+      "stock": 27
+    },
+    {
+      "id": "p_1019",
+      "title": "Sunglasses",
+      "description": "UV-protected stylish sunglasses.",
+      "price": 21.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=20",
+      "images": [
+        "https://picsum.photos/600/600?random=20"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4.1,
+      "reviewsCount": 61,
+      "category": "accessories",
+      "brand": "SunX",
+      "stock": 50
+    },
+    {
+      "id": "p_1020",
+      "title": "Gym Duffle Bag",
+      "description": "Spacious gym duffle bag.",
+      "price": 49.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=21",
+      "images": [
+        "https://picsum.photos/600/600?random=21"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4.6,
+      "reviewsCount": 143,
+      "category": "accessories",
+      "brand": "PackPro",
+      "stock": 18
+    },
+    {
+      "id": "p_1021",
+      "title": "Track Pants",
+      "description": "Comfort-fit track pants.",
+      "price": 22.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=22",
+      "images": [
+        "https://picsum.photos/600/600?random=22"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4.2,
+      "reviewsCount": 69,
+      "category": "apparel",
+      "brand": "FitWear",
+      "stock": 45
+    },
+    {
+      "id": "p_1022",
+      "title": "Slip-On Sandals",
+      "description": "Lightweight everyday sandals.",
+      "price": 16.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=23",
+      "images": [
+        "https://picsum.photos/600/600?random=23"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4,
+      "reviewsCount": 33,
+      "category": "shoes",
+      "brand": "UrbanWalk",
+      "stock": 60
+    },
+    {
+      "id": "p_1023",
+      "title": "Beanie Cap",
+      "description": "Warm winter beanie cap.",
+      "price": 11.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=24",
+      "images": [
+        "https://picsum.photos/600/600?random=24"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4.1,
+      "reviewsCount": 41,
+      "category": "accessories",
+      "brand": "CozyWear",
+      "stock": 70
+    },
+    {
+      "id": "p_1024",
+      "title": "Running Shoes Pro",
+      "description": "Professional running shoes.",
+      "price": 99.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=25",
+      "images": [
+        "https://picsum.photos/600/600?random=25"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4.8,
+      "reviewsCount": 256,
+      "category": "shoes",
+      "brand": "FastStep",
+      "stock": 14
+    },
+    {
+      "id": "p_1025",
+      "title": "Checked Casual Shirt",
+      "description": "Casual checked cotton shirt.",
+      "price": 26.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=26",
+      "images": [
+        "https://picsum.photos/600/600?random=26"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4.3,
+      "reviewsCount": 82,
+      "category": "apparel",
+      "brand": "UrbanStyle",
+      "stock": 38
+    },
+    {
+      "id": "p_1026",
+      "title": "Laptop Sleeve",
+      "description": "Protective laptop sleeve.",
+      "price": 19.49,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=27",
+      "images": [
+        "https://picsum.photos/600/600?random=27"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4.4,
+      "reviewsCount": 58,
+      "category": "accessories",
+      "brand": "PackPro",
+      "stock": 52
+    },
+    {
+      "id": "p_1027",
+      "title": "Flip Flops",
+      "description": "Comfortable rubber flip flops.",
+      "price": 8.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=28",
+      "images": [
+        "https://picsum.photos/600/600?random=28"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 3.9,
+      "reviewsCount": 25,
+      "category": "shoes",
+      "brand": "UrbanWalk",
+      "stock": 90
+    },
+    {
+      "id": "p_1028",
+      "title": "Cotton Socks Pack",
+      "description": "Pack of 3 cotton socks.",
+      "price": 6.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=29",
+      "images": [
+        "https://picsum.photos/600/600?random=29"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4,
+      "reviewsCount": 47,
+      "category": "apparel",
+      "brand": "CozyWear",
+      "stock": 120
+    },
+    {
+      "id": "p_1029",
+      "title": "Travel Wallet",
+      "description": "RFID protected travel wallet.",
+      "price": 17.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=30",
+      "images": [
+        "https://picsum.photos/600/600?random=30"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4.2,
+      "reviewsCount": 66,
+      "category": "accessories",
+      "brand": "CarryAll",
+      "stock": 34
+    },
+    {
+      "id": "p_1030",
+      "title": "Performance T-Shirt",
+      "description": "Moisture-wicking performance tee.",
+      "price": 21.49,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=31",
+      "images": [
+        "https://picsum.photos/600/600?random=31"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4.5,
+      "reviewsCount": 101,
+      "category": "apparel",
+      "brand": "FitWear",
+      "stock": 48
+    },
+    {
+      "id": "p_1031",
+      "title": "Relaxed Fit T-Shirt",
+      "description": "Everyday relaxed-fit cotton t-shirt.",
+      "price": 22.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=32",
+      "images": [
+        "https://picsum.photos/600/600?random=32"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4.3,
+      "reviewsCount": 71,
+      "category": "apparel",
+      "brand": "Acme",
+      "stock": 48
+    },
+    {
+      "id": "p_1032",
+      "title": "Athletic Joggers",
+      "description": "Comfort joggers for workouts and travel.",
+      "price": 28.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=33",
+      "images": [
+        "https://picsum.photos/600/600?random=33"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4.4,
+      "reviewsCount": 83,
+      "category": "apparel",
+      "brand": "FitWear",
+      "stock": 46
+    },
+    {
+      "id": "p_1033",
+      "title": "Street Style Sneakers",
+      "description": "Modern sneakers for casual wear.",
+      "price": 67.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=34",
+      "images": [
+        "https://picsum.photos/600/600?random=34"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4.6,
+      "reviewsCount": 149,
+      "category": "shoes",
+      "brand": "FastStep",
+      "stock": 23
+    },
+    {
+      "id": "p_1034",
+      "title": "Office Backpack",
+      "description": "Laptop-friendly office backpack.",
+      "price": 84.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=35",
+      "images": [
+        "https://picsum.photos/600/600?random=35"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4.7,
+      "reviewsCount": 178,
+      "category": "accessories",
+      "brand": "PackPro",
+      "stock": 18
+    },
+    {
+      "id": "p_1035",
+      "title": "Classic Crew Sweatshirt",
+      "description": "Soft fleece crew neck sweatshirt.",
+      "price": 31.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=36",
+      "images": [
+        "https://picsum.photos/600/600?random=36"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4.5,
+      "reviewsCount": 92,
+      "category": "apparel",
+      "brand": "CozyWear",
+      "stock": 34
+    },
+    {
+      "id": "p_1036",
+      "title": "Daily Training Shorts",
+      "description": "Lightweight shorts for training.",
+      "price": 19.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=37",
+      "images": [
+        "https://picsum.photos/600/600?random=37"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4.2,
+      "reviewsCount": 61,
+      "category": "apparel",
+      "brand": "FitWear",
+      "stock": 55
+    },
+    {
+      "id": "p_1037",
+      "title": "Minimal White Sneakers",
+      "description": "Clean minimalist everyday sneakers.",
+      "price": 71.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=38",
+      "images": [
+        "https://picsum.photos/600/600?random=38"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4.6,
+      "reviewsCount": 164,
+      "category": "shoes",
+      "brand": "FastStep",
+      "stock": 26
+    },
+    {
+      "id": "p_1038",
+      "title": "Travel Duffel Bag",
+      "description": "Spacious duffel bag for travel.",
+      "price": 52.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=39",
+      "images": [
+        "https://picsum.photos/600/600?random=39"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4.6,
+      "reviewsCount": 137,
+      "category": "accessories",
+      "brand": "PackPro",
+      "stock": 21
+    },
+    {
+      "id": "p_1039",
+      "title": "Checked Casual Shirt",
+      "description": "Everyday checked cotton shirt.",
+      "price": 26.49,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=40",
+      "images": [
+        "https://picsum.photos/600/600?random=40"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4.3,
+      "reviewsCount": 85,
+      "category": "apparel",
+      "brand": "UrbanStyle",
+      "stock": 41
+    },
+    {
+      "id": "p_1040",
+      "title": "Urban Sports Watch",
+      "description": "Durable sports watch for daily use.",
+      "price": 109.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=41",
+      "images": [
+        "https://picsum.photos/600/600?random=41"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4.7,
+      "reviewsCount": 261,
+      "category": "accessories",
+      "brand": "Timely",
+      "stock": 17
+    },
+    {
+      "id": "p_1041",
+      "title": "Slim Fit Casual Shirt",
+      "description": "Slim-fit shirt for everyday casual wear.",
+      "price": 25.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=42",
+      "images": [
+        "https://picsum.photos/600/600?random=42"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4.3,
+      "reviewsCount": 73,
+      "category": "apparel",
+      "brand": "Acme",
+      "stock": 42
+    },
+    {
+      "id": "p_1042",
+      "title": "Comfort Track Pants",
+      "description": "Relaxed fit track pants for daily use.",
+      "price": 23.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=43",
+      "images": [
+        "https://picsum.photos/600/600?random=43"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4.2,
+      "reviewsCount": 66,
+      "category": "apparel",
+      "brand": "FitWear",
+      "stock": 47
+    },
+    {
+      "id": "p_1043",
+      "title": "Running Shoes Lite",
+      "description": "Lightweight running shoes for beginners.",
+      "price": 74.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=44",
+      "images": [
+        "https://picsum.photos/600/600?random=44"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4.5,
+      "reviewsCount": 188,
+      "category": "shoes",
+      "brand": "FastStep",
+      "stock": 19
+    },
+    {
+      "id": "p_1044",
+      "title": "Classic Leather Wallet",
+      "description": "Compact genuine leather wallet.",
+      "price": 15.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=45",
+      "images": [
+        "https://picsum.photos/600/600?random=45"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4.1,
+      "reviewsCount": 59,
+      "category": "accessories",
+      "brand": "CarryAll",
+      "stock": 62
+    },
+    {
+      "id": "p_1045",
+      "title": "Pullover Hoodie",
+      "description": "Warm pullover hoodie with soft lining.",
+      "price": 36.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=46",
+      "images": [
+        "https://picsum.photos/600/600?random=46"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4.5,
+      "reviewsCount": 111,
+      "category": "apparel",
+      "brand": "CozyWear",
+      "stock": 33
+    },
+    {
+      "id": "p_1046",
+      "title": "Canvas Casual Shoes",
+      "description": "Durable canvas shoes for daily wear.",
+      "price": 41.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=47",
+      "images": [
+        "https://picsum.photos/600/600?random=47"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4.2,
+      "reviewsCount": 72,
+      "category": "shoes",
+      "brand": "UrbanWalk",
+      "stock": 29
+    },
+    {
+      "id": "p_1047",
+      "title": "Sports Performance Tee",
+      "description": "Moisture-wicking sports t-shirt.",
+      "price": 21.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=48",
+      "images": [
+        "https://picsum.photos/600/600?random=48"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4.4,
+      "reviewsCount": 94,
+      "category": "apparel",
+      "brand": "FitWear",
+      "stock": 51
+    },
+    {
+      "id": "p_1048",
+      "title": "Travel Backpack Plus",
+      "description": "Multi-compartment travel backpack.",
+      "price": 92.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=49",
+      "images": [
+        "https://picsum.photos/600/600?random=49"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4.7,
+      "reviewsCount": 203,
+      "category": "accessories",
+      "brand": "PackPro",
+      "stock": 15
+    },
+    {
+      "id": "p_1049",
+      "title": "Formal Office Shirt",
+      "description": "Sharp formal shirt for office wear.",
+      "price": 27.49,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=50",
+      "images": [
+        "https://picsum.photos/600/600?random=50"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4.3,
+      "reviewsCount": 89,
+      "category": "apparel",
+      "brand": "Acme",
+      "stock": 38
+    },
+    {
+      "id": "p_1050",
+      "title": "All-Day Walking Shoes",
+      "description": "Comfort shoes designed for long walks.",
+      "price": 68.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=51",
+      "images": [
+        "https://picsum.photos/600/600?random=51"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4.6,
+      "reviewsCount": 174,
+      "category": "shoes",
+      "brand": "FastStep",
+      "stock": 22
+    },
+    {
+      "id": "p_1051",
+      "title": "Minimalist Wrist Watch",
+      "description": "Minimal design analog wrist watch.",
+      "price": 89.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=52",
+      "images": [
+        "https://picsum.photos/600/600?random=52"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4.7,
+      "reviewsCount": 248,
+      "category": "accessories",
+      "brand": "Timely",
+      "stock": 14
+    },
+    {
+      "id": "p_1052",
+      "title": "Everyday Cotton Socks",
+      "description": "Soft cotton socks for daily comfort.",
+      "price": 7.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=53",
+      "images": [
+        "https://picsum.photos/600/600?random=53"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4,
+      "reviewsCount": 52,
+      "category": "apparel",
+      "brand": "CozyWear",
+      "stock": 110
+    },
+    {
+      "id": "p_1053",
+      "title": "Casual Denim Shirt",
+      "description": "Light denim shirt for casual outfits.",
+      "price": 34.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=54",
+      "images": [
+        "https://picsum.photos/600/600?random=54"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4.4,
+      "reviewsCount": 97,
+      "category": "apparel",
+      "brand": "DenimCo",
+      "stock": 31
+    },
+    {
+      "id": "p_1054",
+      "title": "Slip-On Casual Sandals",
+      "description": "Easy slip-on sandals for daily wear.",
+      "price": 17.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=55",
+      "images": [
+        "https://picsum.photos/600/600?random=55"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4.1,
+      "reviewsCount": 45,
+      "category": "shoes",
+      "brand": "UrbanWalk",
+      "stock": 67
+    },
+    {
+      "id": "p_1055",
+      "title": "Graphic Printed T-Shirt",
+      "description": "Graphic print cotton t-shirt.",
+      "price": 24.49,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=56",
+      "images": [
+        "https://picsum.photos/600/600?random=56"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4.4,
+      "reviewsCount": 88,
+      "category": "apparel",
+      "brand": "UrbanStyle",
+      "stock": 44
+    },
+    {
+      "id": "p_1056",
+      "title": "Medium Gym Duffle",
+      "description": "Medium-sized gym duffle bag.",
+      "price": 46.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=57",
+      "images": [
+        "https://picsum.photos/600/600?random=57"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4.6,
+      "reviewsCount": 129,
+      "category": "accessories",
+      "brand": "PackPro",
+      "stock": 24
+    },
+    {
+      "id": "p_1057",
+      "title": "Lightweight Running Cap",
+      "description": "Breathable running cap for workouts.",
+      "price": 10.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=58",
+      "images": [
+        "https://picsum.photos/600/600?random=58"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4.1,
+      "reviewsCount": 36,
+      "category": "accessories",
+      "brand": "FitWear",
+      "stock": 73
+    },
+    {
+      "id": "p_1058",
+      "title": "Comfort Fit Jeans",
+      "description": "Stretchable comfort fit jeans.",
+      "price": 52.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=59",
+      "images": [
+        "https://picsum.photos/600/600?random=59"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4.3,
+      "reviewsCount": 121,
+      "category": "apparel",
+      "brand": "DenimCo",
+      "stock": 27
+    },
+    {
+      "id": "p_1059",
+      "title": "Daily Use Loafers",
+      "description": "Comfortable loafers for daily use.",
+      "price": 56.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=60",
+      "images": [
+        "https://picsum.photos/600/600?random=60"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4.4,
+      "reviewsCount": 83,
+      "category": "shoes",
+      "brand": "UrbanWalk",
+      "stock": 26
+    },
+    {
+      "id": "p_1060",
+      "title": "Travel Organizer Wallet",
+      "description": "RFID protected travel organizer wallet.",
+      "price": 18.99,
+      "currency": "INR",
+      "thumbnail": "https://picsum.photos/400/400?random=61",
+      "images": [
+        "https://picsum.photos/600/600?random=61"
+      ],
+      "options": {
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "rating": 4.2,
+      "reviewsCount": 69,
+      "category": "accessories",
+      "brand": "CarryAll",
+      "stock": 36
+    }
+  ],
+  "categories": [
+    {
+      "id": "apparel",
+      "name": "Apparel"
+    },
+    {
+      "id": "shoes",
+      "name": "Shoes"
+    },
+    {
+      "id": "accessories",
+      "name": "Accessories"
+    }
+  ],
+  "cart": [
+    {
+      "productId": "p_1001",
+      "title": "Classic Tee",
+      "thumbnail": "https://picsum.photos/400/400?random=1",
+      "price": 19.99,
+      "options": {
+        "color": "white",
+        "size": "M"
+      },
+      "qty": 2,
+      "id": 1
+    },
+    {
+      "productId": "p_1008",
+      "title": "Sports Cap",
+      "thumbnail": "https://picsum.photos/400/400?random=9",
+      "price": 9.99,
+      "options": {
+        "color": "black"
+      },
+      "qty": 1,
+      "id": 2
+    }
+  ],
+  "orders": []
+}

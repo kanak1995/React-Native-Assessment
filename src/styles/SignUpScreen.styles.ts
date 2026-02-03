@@ -17,17 +17,21 @@ export const styles = StyleSheet.create({
     marginBottom: 65,
     includeFontPadding: false,
   },
-  textFieldEmail: {
+  textFieldFName: {
     paddingHorizontal: 36,
     paddingTop: 90,
   },
+  textFieldEmail: {
+    paddingHorizontal: 36,
+    paddingTop: 30,
+  },
   textFieldPassword: {
     paddingHorizontal: 36,
-    paddingTop: 22,
+    paddingTop: 30,
   },
   button: {
     flexDirection: 'row',
-    justifyContent: 'space-around',
+    justifyContent: 'center',
     paddingTop: 50,
     paddingHorizontal: 36,
   },

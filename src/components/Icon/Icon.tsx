@@ -6,6 +6,9 @@ import Logo from '../../../assets/icons/logo.svg';
 import EyeOpen from '../../../assets/icons/eyeOpen.svg';
 import EyeClosed from '../../../assets/icons/eyeClosed.svg';
 import Calendar from '../../../assets/icons/calendar.svg';
+import Home from '../../../assets/icons/home.svg';
+import Cart from '../../../assets/icons/cart.svg';
+import Order from '../../../assets/icons/order.svg';
 
 export type IconName =
   | 'onboardfirst'
@@ -13,7 +16,10 @@ export type IconName =
   | 'logo'
   | 'eyeOpen'
   | 'eyeClosed'
-  | 'calendar';
+  | 'calendar'
+  | 'home'
+  | 'cart'
+  | 'order';
 
 interface IconProps {
   name: IconName;
@@ -31,6 +37,9 @@ const ICON_MAP: Record<IconName, React.FC<any>> = {
   eyeOpen: EyeOpen,
   eyeClosed: EyeClosed,
   calendar: Calendar,
+  home: Home,
+  cart: Cart,
+  order: Order,
   // signup: Signup,
 };
 

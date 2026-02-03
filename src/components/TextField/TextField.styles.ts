@@ -34,7 +34,13 @@ export const styles = StyleSheet.create({
     fontSize: 16,
     lineHeight: 22,
     includeFontPadding: false,
-    // backgroundColor: 'red',
     height: '100%',
+  },
+  errorText: {
+    color: '#D32F2F',
+    fontFamily: FontFamily.poppins.regular,
+    fontSize: 12,
+    marginTop: 4,
+    marginLeft: 4,
   },
 });

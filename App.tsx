@@ -1,55 +1,156 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { StatusBar, useColorScheme } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import WelcomeScreen from './src/screens/onboarding/WelcomeScreen';
-import GetStartedScreen from './src/screens/onboarding/GetStartedScreen';
+import {
+  createBottomTabNavigator,
+  BottomTabNavigationOptions,
+} from '@react-navigation/bottom-tabs';
+
 import Screens from './src/screens/Screen';
 import LoginScreen from './src/screens/onboarding/LoginScreen';
 import SignupScreen from './src/screens/onboarding/SignupScreen';
+import HomeScreen from './src/screens/tabs/home/HomeScreen';
+import CartScreen from './src/screens/tabs/CartScreen';
+import OrdersScreen from './src/screens/tabs/OrdersScreen';
+import ProductDetailsScreen from './src/screens/tabs/home/ProductDetailsScreen';
 
+import { colors } from './src/theme/colors';
+import { FontFamily } from './src/theme/fonts';
+import TabIcon from './src/components/TabIcon';
+import { getToken } from './src/utils/storage';
+
+/* ------------------ TYPES ------------------ */
 export type RootStackParamList = {
-  WelcomeScreen: undefined;
-  GetStartedScreen: undefined;
   LoginScreen: undefined;
   SignupScreen: undefined;
-  //  OTPScreen: { number: string; signUpResponse: SignUpResponse };
-  // PersonalDetails: { number: string; signUpResponse: SignUpResponse };
+  MainTabs: undefined;
+  ProductDetailsScreen: { productId: string; headerTitle: string };
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
+const Tab = createBottomTabNavigator();
 
+/* ------------------ TAB NAVIGATOR ------------------ */
+const TabNavigator = React.memo(() => (
+  <Tab.Navigator screenOptions={commonTabOptions}>
+    <Tab.Screen
+      name={Screens.HomeScreen}
+      component={HomeScreen}
+      options={{ title: 'Home', tabBarIcon: renderHomeIcon }}
+    />
+    <Tab.Screen
+      name={Screens.CartScreen}
+      component={CartScreen}
+      options={{ title: 'Cart', tabBarIcon: renderCartIcon }}
+    />
+    <Tab.Screen
+      name={Screens.OrdersScreen}
+      component={OrdersScreen}
+      options={{ title: 'Orders', tabBarIcon: renderOrderIcon }}
+    />
+  </Tab.Navigator>
+));
+
+/* ------------------ APP ROOT ------------------ */
 export default function App() {
   const isDarkMode = useColorScheme() === 'dark';
+
+  const [authState, setAuthState] = useState<
+    'loading' | 'authenticated' | 'unauthenticated'
+  >('loading');
+
+  useEffect(() => {
+    const checkAuth = async () => {
+      const token = await getToken();
+      setAuthState(token ? 'authenticated' : 'unauthenticated');
+    };
+    checkAuth();
+  }, []); // ✅ RUN ONCE
+
+  if (authState === 'loading') {
+    return null; // Splash screen here
+  }
 
   return (
     <NavigationContainer>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <Stack.Navigator screenOptions={{ headerShown: true }}>
-        {/* <Stack.Screen
-          name={Screens.WelcomeScreen}
-          component={WelcomeScreen}
-          options={{ headerShown: false }}
-        />
+      <Stack.Navigator
+        screenOptions={{ headerShown: false }}
+        initialRouteName={
+          authState === 'authenticated' ? Screens.MainTabs : Screens.LoginScreen
+        }
+      >
+        <Stack.Screen name={Screens.LoginScreen} component={LoginScreen} />
+        <Stack.Screen name={Screens.SignupScreen} component={SignupScreen} />
         <Stack.Screen
-          name={Screens.GetStartedScreen}
-          component={GetStartedScreen}
-          options={{ headerShown: false }}
-        /> */}
-        <Stack.Screen
-          name="LoginScreen"
-          component={LoginScreen}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="SignupScreen"
-          component={SignupScreen}
+          name={Screens.MainTabs}
+          component={TabNavigator}
           options={{
             headerTitle: '',
-            headerTransparent: true,
           }}
+        />
+        <Stack.Screen
+          options={({ route }) => ({
+            headerShown: true,
+            headerTransparent: true,
+            headerTitle: route.params.headerTitle,
+            headerTintColor: colors.lightGreen,
+          })}
+          name={Screens.ProductDetailsScreen}
+          component={ProductDetailsScreen}
         />
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
+
+/* ------------------ TAB OPTIONS ------------------ */
+const commonTabOptions: BottomTabNavigationOptions = {
+  headerShown: false,
+  tabBarShowLabel: true,
+  tabBarActiveTintColor: colors.lightGreen,
+  tabBarInactiveTintColor: colors.darkModeGreenBar,
+  tabBarLabelStyle: {
+    fontFamily: FontFamily.poppins.light,
+    fontSize: 12,
+    marginTop: 18,
+  },
+  tabBarItemStyle: {
+    marginTop: 25,
+  },
+  tabBarStyle: {
+    position: 'absolute',
+    backgroundColor: colors.darkModeGreenBar,
+    borderTopLeftRadius: 28,
+    borderTopRightRadius: 28,
+    height: 100,
+    paddingBottom: 20,
+    elevation: 10,
+  },
+};
+
+/* ------------------ ICON RENDERERS ------------------ */
+const renderHomeIcon = ({ focused }: { focused: boolean }) => (
+  <TabIcon
+    focused={focused}
+    activeIcon={require('./assets/tabs/home/home.png')}
+    inactiveIcon={require('./assets/tabs/home/home.png')}
+  />
+);
+
+const renderCartIcon = ({ focused }: { focused: boolean }) => (
+  <TabIcon
+    focused={focused}
+    activeIcon={require('./assets/tabs/cart/cart.png')}
+    inactiveIcon={require('./assets/tabs/cart/cart.png')}
+  />
+);
+
+const renderOrderIcon = ({ focused }: { focused: boolean }) => (
+  <TabIcon
+    focused={focused}
+    activeIcon={require('./assets/tabs/order/order.png')}
+    inactiveIcon={require('./assets/tabs/order/order.png')}
+  />
+);

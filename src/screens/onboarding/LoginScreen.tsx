@@ -1,32 +1,66 @@
-import React, { useState } from 'react';
-import { Text, TouchableOpacity, View } from 'react-native';
+import React, { useCallback, useState } from 'react';
+import {
+  Text,
+  View,
+  KeyboardAvoidingView,
+  Platform,
+  Alert,
+} from 'react-native';
 import { styles } from '../../styles/LoginScreen.styles';
 import BottomSheet from '../../components/BottomSheet';
 import TextField from '../../components/TextField';
 import Button from '../../components/Button';
-import { useNavigation, NavigationProp } from '@react-navigation/native';
+import {
+  useNavigation,
+  NavigationProp,
+  useFocusEffect,
+} from '@react-navigation/native';
 import Screens from '../Screen';
+import { loginApi } from '../../api/authapi';
+import { saveToken } from '../../utils/storage';
 
 const LoginScreen = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
   const navigation = useNavigation<NavigationProp<any>>();
 
-  const loginHandler = () => {
-    navigation.navigate(Screens.LoginScreen);
+  const loginHandler = async () => {
+    try {
+      const res = await loginApi(email, password);
+      await saveToken(res.token);
+      navigation.navigate(Screens.MainTabs);
+    } catch (err: any) {
+      console.log(err.message);
+      Alert.alert('Login Failed', err?.message || 'Something went wrong', [
+        { text: 'OK' },
+      ]);
+    }
   };
 
   const signupHandler = () => {
     navigation.navigate(Screens.SignupScreen);
   };
 
+  useFocusEffect(
+    useCallback(() => {
+      setEmail('');
+      setPassword('');
+      return () => {};
+    }, []),
+  );
   return (
-    <View style={styles.container}>
+    <KeyboardAvoidingView
+      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+      keyboardVerticalOffset={0}
+      style={styles.container}
+    >
       <Text style={styles.welcome}>Welcome</Text>
       <BottomSheet>
         <TextField
           label="Username Or Email"
           placeholder="example@example.com"
+          returnKeyType="done"
           value={email}
           onChangeText={setEmail}
           style={styles.textFieldEmail}
@@ -35,27 +69,29 @@ const LoginScreen = () => {
         <TextField
           label="Password"
           placeholder="Enter your password"
+          returnKeyType="done"
           value={password}
           onChangeText={setPassword}
           secureTextEntry
           rightIcon="eyeClosed"
           style={styles.textFieldPassword}
         />
-
-        <Button title="Log In" style={styles.loginBtn} onPress={loginHandler} />
-
-        <TouchableOpacity style={styles.forgotBtn}>
-          <Text style={styles.forgotText}>Forgot Password?</Text>
-        </TouchableOpacity>
-
-        <Button
-          title="Sign Up"
-          style={styles.signupBtn}
-          onPress={signupHandler}
-          variant="soft"
-        />
+        <View style={styles.button}>
+          <Button
+            title="Log In"
+            width={150}
+            variant="solid"
+            onPress={loginHandler}
+          />
+          <Button
+            title="Create Account"
+            width={150}
+            onPress={signupHandler}
+            variant="soft"
+          />
+        </View>
       </BottomSheet>
-    </View>
+    </KeyboardAvoidingView>
   );
 };
 

@@ -3,6 +3,11 @@ type RouteName = {
   GetStartedScreen: 'GetStartedScreen';
   LoginScreen: 'LoginScreen';
   SignupScreen: 'SignupScreen';
+  MainTabs: 'MainTabs';
+  HomeScreen: 'HomeScreen';
+  CartScreen: 'CartScreen';
+  OrdersScreen: 'OrdersScreen';
+  ProductDetailsScreen: 'ProductDetailsScreen';
 };
 
 const Screens: RouteName = {
@@ -10,6 +15,11 @@ const Screens: RouteName = {
   GetStartedScreen: 'GetStartedScreen',
   LoginScreen: 'LoginScreen',
   SignupScreen: 'SignupScreen',
+  MainTabs: 'MainTabs',
+  HomeScreen: 'HomeScreen',
+  CartScreen: 'CartScreen',
+  OrdersScreen: 'OrdersScreen',
+  ProductDetailsScreen: 'ProductDetailsScreen',
 };
 
 export default Screens;
