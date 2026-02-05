@@ -5,7 +5,7 @@
       "name": "Kanak",
       "email": "Kanak@gmail.com",
       "password": "Kanak@123",
-      "token": "u2xb4qjriifbimrbz8u1hd"
+      "token": "u2xb4qjriifbimrbz8u1hdaa"
     }
   ],
   "products": [
@@ -1757,30 +1757,81 @@
       "name": "Accessories"
     }
   ],
-  "cart": [
+  "cart": [],
+  "orders": [
     {
-      "productId": "p_1001",
-      "title": "Classic Tee",
-      "thumbnail": "https://picsum.photos/400/400?random=1",
-      "price": 19.99,
-      "options": {
-        "color": "white",
-        "size": "M"
+      "id": "ord_1001",
+      "status": "processing",
+      "amount": 87.18,
+      "createdAt": "2026-02-05T07:25:21.524Z",
+      "address": {
+        "name": "Kanak Yadav",
+        "phone": "7738808577",
+        "line1": "Sector 73",
+        "city": "Noida",
+        "postalCode": "201301",
+        "country": "IN"
       },
-      "qty": 2,
-      "id": 1
+      "payment": {
+        "method": "COD"
+      },
+      "items": [
+        {
+          "productId": "p_1002",
+          "title": "Premium Polo Shirt",
+          "thumbnail": "https://picsum.photos/400/400?random=61",
+          "price": 29.99,
+          "options": {
+            "color": "white",
+            "size": "L"
+          },
+          "qty": 1,
+          "id": 1
+        },
+        {
+          "productId": "p_1003",
+          "title": "Slim Fit Jeans",
+          "thumbnail": "https://picsum.photos/400/400?random=4",
+          "price": 49.99,
+          "options": {
+            "color": "blue",
+            "size": "34"
+          },
+          "qty": 1,
+          "id": 2
+        }
+      ]
     },
     {
-      "productId": "p_1008",
-      "title": "Sports Cap",
-      "thumbnail": "https://picsum.photos/400/400?random=9",
-      "price": 9.99,
-      "options": {
-        "color": "black"
+      "id": "ord_1002",
+      "status": "processing",
+      "amount": 32.69,
+      "createdAt": "2026-02-05T10:03:16.305Z",
+      "address": {
+        "name": "Sonu",
+        "phone": "7738808577",
+        "line1": "Sector 73",
+        "city": "Noida",
+        "postalCode": "201301",
+        "country": "IN"
       },
-      "qty": 1,
-      "id": 2
+      "payment": {
+        "method": "COD"
+      },
+      "items": [
+        {
+          "productId": "p_1002",
+          "title": "Premium Polo Shirt",
+          "thumbnail": "https://picsum.photos/400/400?random=61",
+          "price": 29.99,
+          "options": {
+            "color": "white",
+            "size": "L"
+          },
+          "qty": 1,
+          "id": 2
+        }
+      ]
     }
-  ],
-  "orders": []
+  ]
 }

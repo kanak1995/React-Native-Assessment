@@ -1,5 +1,5 @@
 export interface CartItemModel {
-  id?: number; // json-server internal id
+  id?: number;
   productId: string;
   title: string;
   thumbnail: string;

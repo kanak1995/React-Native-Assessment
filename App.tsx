@@ -11,9 +11,12 @@ import Screens from './src/screens/Screen';
 import LoginScreen from './src/screens/onboarding/LoginScreen';
 import SignupScreen from './src/screens/onboarding/SignupScreen';
 import HomeScreen from './src/screens/tabs/home/HomeScreen';
-import CartScreen from './src/screens/tabs/CartScreen';
-import OrdersScreen from './src/screens/tabs/OrdersScreen';
+import CartScreen from './src/screens/tabs/cart/CartScreen';
+import OrdersScreen from './src/screens/tabs/order/OrdersScreen';
 import ProductDetailsScreen from './src/screens/tabs/home/ProductDetailsScreen';
+import CheckoutScreen from './src/screens/tabs/cart/CheckoutScreen';
+import OrderSuccessScreen from './src/screens/tabs/cart/OrderSuccessScreen';
+import OrderDetailsScreen from './src/screens/tabs/order/OrderDetailsScreen';
 
 import { colors } from './src/theme/colors';
 import { FontFamily } from './src/theme/fonts';
@@ -26,6 +29,9 @@ export type RootStackParamList = {
   SignupScreen: undefined;
   MainTabs: undefined;
   ProductDetailsScreen: { productId: string; headerTitle: string };
+  CheckoutScreen: undefined;
+  OrderSuccessScreen: { orderId: string; amount: Number };
+  OrderDetailsScreen: { orderId: string };
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -47,7 +53,11 @@ const TabNavigator = React.memo(() => (
     <Tab.Screen
       name={Screens.OrdersScreen}
       component={OrdersScreen}
-      options={{ title: 'Orders', tabBarIcon: renderOrderIcon }}
+      options={{
+        title: 'Orders',
+        tabBarIcon: renderOrderIcon,
+        headerTitle: '',
+      }}
     />
   </Tab.Navigator>
 ));
@@ -99,6 +109,33 @@ export default function App() {
           })}
           name={Screens.ProductDetailsScreen}
           component={ProductDetailsScreen}
+        />
+        <Stack.Screen
+          options={{
+            headerShown: true,
+            headerTransparent: true,
+            headerTitle: 'Shipping Address',
+            headerTintColor: colors.lightGreen,
+          }}
+          name={Screens.CheckoutScreen}
+          component={CheckoutScreen}
+        />
+        <Stack.Screen
+          options={{
+            headerShown: false,
+          }}
+          name={Screens.OrderSuccessScreen}
+          component={OrderSuccessScreen}
+        />
+        <Stack.Screen
+          options={{
+            headerShown: true,
+            headerTransparent: true,
+            headerTitle: '',
+            headerTintColor: colors.lightGreen,
+          }}
+          name={Screens.OrderDetailsScreen}
+          component={OrderDetailsScreen}
         />
       </Stack.Navigator>
     </NavigationContainer>

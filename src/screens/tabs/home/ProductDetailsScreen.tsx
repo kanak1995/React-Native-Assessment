@@ -10,7 +10,12 @@ import {
   ScrollView,
   Alert,
 } from 'react-native';
-import { RouteProp, useRoute } from '@react-navigation/native';
+import {
+  NavigationProp,
+  RouteProp,
+  useNavigation,
+  useRoute,
+} from '@react-navigation/native';
 import { colors } from '../../../theme/colors';
 import { Dimensions } from 'react-native';
 import { FontFamily } from '../../../theme/fonts';
@@ -29,6 +34,7 @@ type RouteParams = {
 
 const ProductDetailsScreen = () => {
   const route = useRoute<RouteProp<RouteParams, 'ProductDetails'>>();
+  const navigation = useNavigation<NavigationProp<any>>();
   const { productId } = route.params;
   const [product, setProduct] = useState<ProductModel | null>(null);
   const [loading, setLoading] = useState(true);
@@ -74,6 +80,15 @@ const ProductDetailsScreen = () => {
       Alert.alert(
         'Added to Cart',
         'Product has been added to your cart successfully.',
+        [
+          {
+            text: 'Ok',
+            onPress: () => {
+              navigation.goBack();
+            },
+            style: 'default',
+          },
+        ],
       );
     } catch (err) {
       console.error('Add to cart failed', err);

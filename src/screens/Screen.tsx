@@ -8,6 +8,9 @@ type RouteName = {
   CartScreen: 'CartScreen';
   OrdersScreen: 'OrdersScreen';
   ProductDetailsScreen: 'ProductDetailsScreen';
+  CheckoutScreen: 'CheckoutScreen';
+  OrderSuccessScreen: 'OrderSuccessScreen';
+  OrderDetailsScreen: 'OrderDetailsScreen';
 };
 
 const Screens: RouteName = {
@@ -20,6 +23,9 @@ const Screens: RouteName = {
   CartScreen: 'CartScreen',
   OrdersScreen: 'OrdersScreen',
   ProductDetailsScreen: 'ProductDetailsScreen',
+  CheckoutScreen: 'CheckoutScreen',
+  OrderSuccessScreen: 'OrderSuccessScreen',
+  OrderDetailsScreen: 'OrderDetailsScreen',
 };
 
 export default Screens;

@@ -58,3 +58,18 @@ export async function removeFromCart(productId: string) {
     method: 'DELETE',
   });
 }
+
+// ---------------- CLEAR CART ----------------
+export async function clearCart(): Promise<void> {
+  const items = await request<CartItemModel[]>(`${BASE_URL}/cart`);
+
+  if (!items.length) return;
+
+  await Promise.all(
+    items.map(item =>
+      request(`${BASE_URL}/cart/${item.id}`, {
+        method: 'DELETE',
+      }),
+    ),
+  );
+}
