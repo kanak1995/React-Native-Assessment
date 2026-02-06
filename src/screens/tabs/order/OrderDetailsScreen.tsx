@@ -1,10 +1,8 @@
 import { styles } from '../../../styles/OrderDetailsScreen.styles';
-import React, { useEffect, useState } from 'react';
 import { View, Text, FlatList, Image, ScrollView } from 'react-native';
 import { RouteProp, useRoute } from '@react-navigation/native';
-import { getOrderById } from '../../../api/orders.api';
-import { OrderModel } from '../../../models/OrderModel';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { useOrderDetails } from '../../../hooks/useOrderDetails';
 
 type RouteParams = {
   OrderDetailsScreen: {
@@ -14,27 +12,8 @@ type RouteParams = {
 
 const OrderDetailsScreen = () => {
   const route = useRoute<RouteProp<RouteParams, 'OrderDetailsScreen'>>();
-  const { orderId } = route.params;
   const { top } = useSafeAreaInsets();
-
-  const [order, setOrder] = useState<OrderModel | null>(null);
-  const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    const loadOrder = async () => {
-      try {
-        setLoading(true);
-        const res = await getOrderById(orderId);
-        setOrder(res);
-      } catch (err) {
-        console.log('Failed to load order', err);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    loadOrder();
-  }, [orderId]);
+  const { order, loading } = useOrderDetails(route.params.orderId);
 
   if (!order && loading) {
     return <Text style={styles.loading}>Loading...</Text>;

@@ -30,6 +30,17 @@ const CartScreen = () => {
     );
   }
 
+  if (cart.items.length === 0) {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.header}>Cart</Text>
+        <View style={styles.emptyView}>
+          <Text style={styles.notFound}>Your cart is empty</Text>
+        </View>
+      </View>
+    );
+  }
+
   return (
     <View style={styles.container}>
       <Text style={styles.header}>Cart ({cart.items.length})</Text>

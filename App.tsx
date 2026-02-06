@@ -91,8 +91,16 @@ export default function App() {
           authState === 'authenticated' ? Screens.MainTabs : Screens.LoginScreen
         }
       >
-        <Stack.Screen name={Screens.LoginScreen} component={LoginScreen} />
-        <Stack.Screen name={Screens.SignupScreen} component={SignupScreen} />
+        <Stack.Screen
+          name={Screens.LoginScreen}
+          component={LoginScreen}
+          options={{ headerTitle: '' }}
+        />
+        <Stack.Screen
+          name={Screens.SignupScreen}
+          component={SignupScreen}
+          options={{ headerShown: true, headerTransparent: true }}
+        />
         <Stack.Screen
           name={Screens.MainTabs}
           component={TabNavigator}

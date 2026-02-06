@@ -8,13 +8,6 @@ export const styles = StyleSheet.create({
     backgroundColor: colors.backgroundDarkGreenDark,
     paddingHorizontal: 30,
   },
-  header: {
-    // fontFamily: FontFamily.poppins.semiBold,
-    // fontSize: 18,
-    // color: colors.lightGreen,
-    // marginTop: useSafeAreaInsets().top + 50,
-    // alignSelf: 'center',
-  },
   input: {
     paddingTop: 15,
   },

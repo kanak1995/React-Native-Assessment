@@ -79,15 +79,15 @@ const LoginScreen = () => {
         <View style={styles.button}>
           <Button
             title="Log In"
-            width={150}
             variant="solid"
             onPress={loginHandler}
+            style={styles.loginBtn}
           />
           <Button
             title="Create Account"
-            width={150}
             onPress={signupHandler}
             variant="soft"
+            style={styles.loginBtn}
           />
         </View>
       </BottomSheet>

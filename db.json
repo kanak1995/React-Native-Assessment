@@ -5,7 +5,14 @@
       "name": "Kanak",
       "email": "Kanak@gmail.com",
       "password": "Kanak@123",
-      "token": "u2xb4qjriifbimrbz8u1hdaa"
+      "token": "sjeetpjhvyrmlauk5no"
+    },
+    {
+      "name": "Sonu",
+      "email": "Sonu@gmail.com",
+      "password": "Kanak@123",
+      "token": "zo1v7bp99agmlaulce4",
+      "id": "kZm3ZxR"
     }
   ],
   "products": [
@@ -1804,7 +1811,7 @@
     },
     {
       "id": "ord_1002",
-      "status": "processing",
+      "status": "delivered",
       "amount": 32.69,
       "createdAt": "2026-02-05T10:03:16.305Z",
       "address": {
@@ -1830,6 +1837,137 @@
           },
           "qty": 1,
           "id": 2
+        }
+      ]
+    },
+    {
+      "id": "ord_1003",
+      "status": "cancelled",
+      "amount": 1310.96,
+      "createdAt": "2026-02-05T11:18:51.009Z",
+      "address": {
+        "name": "Kanak",
+        "phone": "7738808577",
+        "line1": "Sector 73",
+        "city": "Noda",
+        "postalCode": "201301",
+        "country": "IN"
+      },
+      "payment": {
+        "method": "CARD"
+      },
+      "items": [
+        {
+          "productId": "p_1003",
+          "title": "Slim Fit Jeans",
+          "thumbnail": "https://picsum.photos/400/400?random=4",
+          "price": 49.99,
+          "options": {
+            "color": "blue",
+            "size": "34"
+          },
+          "qty": 1,
+          "id": 1
+        },
+        {
+          "productId": "p_1004",
+          "title": "Running Sneakers",
+          "thumbnail": "https://picsum.photos/400/400?random=5",
+          "price": 79.99,
+          "options": {
+            "color": "white",
+            "size": "10"
+          },
+          "qty": 2,
+          "id": 2
+        },
+        {
+          "productId": "p_1006",
+          "title": "Leather Wallet",
+          "thumbnail": "https://picsum.photos/400/400?random=7",
+          "price": 14.99,
+          "options": {
+            "color": "brown"
+          },
+          "qty": 3,
+          "id": 3
+        },
+        {
+          "productId": "p_1007",
+          "title": "Analog Wrist Watch",
+          "thumbnail": "https://picsum.photos/400/400?random=8",
+          "price": 99.99,
+          "options": {
+            "color": "brown"
+          },
+          "qty": 4,
+          "id": 4
+        },
+        {
+          "productId": "p_1008",
+          "title": "Sports Cap",
+          "thumbnail": "https://picsum.photos/400/400?random=9",
+          "price": 9.99,
+          "options": {
+            "color": "white"
+          },
+          "qty": 5,
+          "id": 5
+        },
+        {
+          "productId": "p_1010",
+          "title": "Formal Leather Belt",
+          "thumbnail": "https://picsum.photos/400/400?random=11",
+          "price": 12.99,
+          "options": {
+            "color": "brown",
+            "size": "XL"
+          },
+          "qty": 6,
+          "id": 6
+        },
+        {
+          "productId": "p_1011",
+          "title": "Denim Jacket",
+          "thumbnail": "https://picsum.photos/400/400?random=12",
+          "price": 59.99,
+          "options": {
+            "color": "white",
+            "size": "L"
+          },
+          "qty": 7,
+          "id": 7
+        }
+      ]
+    },
+    {
+      "id": "ord_1004",
+      "status": "processing",
+      "amount": 54.49,
+      "createdAt": "2026-02-05T12:47:31.110Z",
+      "address": {
+        "name": "Sonu",
+        "phone": "7738808577",
+        "line1": "Noida",
+        "city": "Sdffd",
+        "postalCode": "3212",
+        "country": "IN"
+      },
+      "payment": {
+        "method": "COD"
+      },
+      "items": [
+        {
+          "productId": "p_1003",
+          "title": "Slim Fit Jeans",
+          "thumbnail": "https://picsum.photos/400/400?random=4",
+          "price": 49.99,
+          "options": {
+            "color": "blue",
+            "size": "36"
+          },
+          "qty": 1,
+          "id": 1
         }
       ]
     }

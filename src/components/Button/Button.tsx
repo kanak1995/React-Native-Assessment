@@ -9,8 +9,8 @@ import {
 import { styles } from './Button.styles';
 
 type ButtonVariant = 'solid' | 'soft';
-const DEFAULT_WIDTH = 207;
-const DEFAULT_HEIGHT = 45;
+// const DEFAULT_WIDTH = 207;
+// const DEFAULT_HEIGHT = 45;
 
 interface ButtonsProps extends ButtonProps {
   title: string;
@@ -18,8 +18,8 @@ interface ButtonsProps extends ButtonProps {
   variant?: ButtonVariant;
   style?: ViewStyle;
   textStyle?: TextStyle;
-  width?: number;
-  height?: number;
+  // width?: number;
+  // height?: number;
 }
 
 const Button: React.FC<ButtonsProps> = ({
@@ -28,8 +28,8 @@ const Button: React.FC<ButtonsProps> = ({
   variant = 'solid',
   style,
   textStyle,
-  width = DEFAULT_WIDTH,
-  height = DEFAULT_HEIGHT,
+  // width = DEFAULT_WIDTH,
+  // height = DEFAULT_HEIGHT,
   ...rest
 }) => {
   const isSolid = variant === 'solid';
@@ -40,11 +40,11 @@ const Button: React.FC<ButtonsProps> = ({
       onPress={onPress}
       style={[
         styles.container,
-        {
-          width,
-          height,
-          borderRadius: height / 2, // auto pill shape
-        },
+        // {
+        //   width,
+        //   height,
+        //   borderRadius: height / 2, // auto pill shape
+        // },
         isSolid ? styles.solid : styles.soft,
         style,
       ]}

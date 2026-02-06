@@ -7,12 +7,27 @@ export const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.backgroundDarkGreenDark,
   },
+  header: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+  },
+  loading: {
+    color: 'white',
+    textAlign: 'center',
+  },
   orderHistory: {
     fontFamily: FontFamily.poppins.bold,
     color: colors.backgroundLightGreen,
     fontSize: 25,
     marginTop: 60,
     alignSelf: 'center',
+  },
+  logoutText: {
+    fontFamily: FontFamily.poppins.semiBold,
+    color: colors.backgroundLightGreen,
+    fontSize: 15,
+    marginTop: 70,
+    marginLeft: 30,
   },
   card: {
     backgroundColor: colors.lightGreen,
@@ -47,13 +62,13 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingVertical: 4,
     borderRadius: 12,
-    backgroundColor: '#ddd',
+    backgroundColor: '#d8b7b7',
   },
   delivered: {
-    backgroundColor: '#C8F7DC',
+    backgroundColor: '#8de8b5',
   },
   processing: {
-    backgroundColor: '#FFE7A3',
+    backgroundColor: '#eecf78',
   },
   statusText: {
     fontSize: 12,

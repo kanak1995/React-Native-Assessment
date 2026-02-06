@@ -32,8 +32,7 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 36,
   },
   loginBtn: {
-    marginTop: 40,
-    alignSelf: 'center',
+    width: 150,
   },
   forgotBtn: {
     marginTop: 15,

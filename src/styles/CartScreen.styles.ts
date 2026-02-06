@@ -15,6 +15,17 @@ export const styles = StyleSheet.create({
     marginTop: 60,
     alignSelf: 'center',
   },
+  emptyView: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  notFound: {
+    color: colors.lightGreen,
+    fontFamily: FontFamily.poppins.semiBold,
+    fontSize: 20,
+    textAlign: 'center',
+  },
   loading: {
     color: colors.lightGreen,
     textAlign: 'center',

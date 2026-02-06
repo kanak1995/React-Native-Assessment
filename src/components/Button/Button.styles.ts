@@ -2,14 +2,11 @@ import { StyleSheet } from 'react-native';
 import { colors } from '../../theme/colors';
 import { FontFamily } from '../../theme/fonts';
 
-export const BUTTON_WIDTH = 207;
-export const BUTTON_HEIGHT = 45;
-
 export const styles = StyleSheet.create({
   container: {
-    width: BUTTON_WIDTH,
-    height: BUTTON_HEIGHT,
-    borderRadius: BUTTON_HEIGHT / 2,
+    width: 207,
+    height: 45,
+    borderRadius: 22.5,
     alignItems: 'center',
     justifyContent: 'center',
   },

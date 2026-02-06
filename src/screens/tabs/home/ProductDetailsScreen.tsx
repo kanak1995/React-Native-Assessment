@@ -1,247 +1,82 @@
-import React, { useEffect, useState, useRef } from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-  FlatList,
-  Image,
-  TouchableOpacity,
-  ActivityIndicator,
-  ScrollView,
-  Alert,
-} from 'react-native';
-import {
-  NavigationProp,
-  RouteProp,
-  useNavigation,
-  useRoute,
-} from '@react-navigation/native';
+import React from 'react';
+import { View, ScrollView, ActivityIndicator, Text } from 'react-native';
+import { useNavigation, useRoute, RouteProp } from '@react-navigation/native';
+import { styles } from '../../../styles/ProductDetailsScreen.styles';
 import { colors } from '../../../theme/colors';
-import { Dimensions } from 'react-native';
-import { FontFamily } from '../../../theme/fonts';
-import { getProductById } from '../../../api/product.api';
-import { ProductModel } from '../../../models/ProductModel';
-import { addToCart } from '../../../api/cart.api';
 
-const { width } = Dimensions.get('window');
-const AUTO_SCROLL_INTERVAL = 3000;
+import { useProductDetails } from '../../../hooks/useProductDetails';
+import ImageCarousel from '../../../components/ImageCarousel';
+import ProductOptions from '../../../components/ProductOptions';
+import Button from '../../../components/Button';
+// import AddToCartButton from '../../../components/AddToCartButton';
 
 type RouteParams = {
-  ProductDetails: {
-    productId: string;
-  };
+  ProductDetails: { productId: string };
 };
 
 const ProductDetailsScreen = () => {
+  const navigation = useNavigation();
   const route = useRoute<RouteProp<RouteParams, 'ProductDetails'>>();
-  const navigation = useNavigation<NavigationProp<any>>();
-  const { productId } = route.params;
-  const [product, setProduct] = useState<ProductModel | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState('');
-  const [selectedColor, setSelectedColor] = useState<string | null>(null);
-  const [selectedSize, setSelectedSize] = useState<string | null>(null);
-  const [expanded, setExpanded] = useState(false);
-  const [activeIndex, setActiveIndex] = useState(0);
-  const carouselRef = useRef<FlatList<string>>(null);
 
-  const handleAddToCart = async () => {
-    console.log('sdfhjgjfgjgd');
-    if (!product) return;
-    if (hasColors && !selectedColor) {
-      Alert.alert(
-        'Select Color',
-        'Please select a color before adding to cart.',
-      );
-      return;
-    }
-
-    if (hasSizes && !selectedSize) {
-      Alert.alert('Select Size', 'Please select a size before adding to cart.');
-      return;
-    }
-
-    try {
-      await addToCart(
-        {
-          productId: product.id,
-          title: product.title,
-          thumbnail: product.thumbnail,
-          price: product.price,
-          options: {
-            color: selectedColor || undefined,
-            size: selectedSize || undefined,
-          },
-        },
-        1,
-      );
-      // Optional UX feedback
-      console.log('Added to cart');
-      Alert.alert(
-        'Added to Cart',
-        'Product has been added to your cart successfully.',
-        [
-          {
-            text: 'Ok',
-            onPress: () => {
-              navigation.goBack();
-            },
-            style: 'default',
-          },
-        ],
-      );
-    } catch (err) {
-      console.error('Add to cart failed', err);
-    }
-  };
-
-  useEffect(() => {
-    if (!product?.images || product.images.length <= 1) return;
-
-    const interval = setInterval(() => {
-      setActiveIndex(prev => {
-        const nextIndex = prev === product.images.length - 1 ? 0 : prev + 1;
-
-        carouselRef.current?.scrollToIndex({
-          index: nextIndex,
-          animated: true,
-        });
-
-        return nextIndex;
-      });
-    }, AUTO_SCROLL_INTERVAL);
-
-    return () => clearInterval(interval);
-  }, [product?.images]);
-
-  useEffect(() => {
-    const loadProduct = async () => {
-      try {
-        setLoading(true);
-        const data = await getProductById(productId);
-        setProduct(data);
-      } catch (err) {
-        setError('Failed to load product');
-        console.error(err);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    loadProduct();
-  }, [productId]);
+  const {
+    product,
+    loading,
+    error,
+    expanded,
+    setExpanded,
+    selectedColor,
+    setSelectedColor,
+    selectedSize,
+    setSelectedSize,
+    activeIndex,
+    setActiveIndex,
+    carouselRef,
+    addToCartHandler,
+  } = useProductDetails(route.params.productId, navigation);
 
   if (loading) {
     return (
       <View style={styles.center}>
-        <ActivityIndicator color={colors.mainGreen} size="large" />
+        <ActivityIndicator color={colors.mainGreen} />
       </View>
     );
   }
 
-  if (error || !product) {
+  if (!product || error) {
     return (
       <View style={styles.center}>
-        <Text style={styles.errorText}>{error || 'Product not found'}</Text>
+        <Text style={styles.errorText}>Product not found</Text>
       </View>
     );
   }
-
-  const hasColors =
-    product.options?.colors && product.options.colors.length > 0;
-
-  const hasSizes = product.options?.sizes && product.options.sizes.length > 0;
-
-  const canAddToCart =
-    product.stock > 0 &&
-    (!hasColors || !!selectedColor) &&
-    (!hasSizes || !!selectedSize);
-
-  console.log('canAddToCart', !canAddToCart);
 
   return (
     <View style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollview}>
-        {/* Image Carousel */}
-        {product.images?.length > 0 && (
-          <FlatList
-            ref={carouselRef}
-            data={product.images}
-            horizontal
-            pagingEnabled
-            keyExtractor={(_, index) => index.toString()}
-            showsHorizontalScrollIndicator={false}
-            onMomentumScrollEnd={e => {
-              const index = Math.round(e.nativeEvent.contentOffset.x / width);
-              setActiveIndex(index);
-            }}
-            renderItem={({ item }) => (
-              <Image source={{ uri: item }} style={styles.image} />
-            )}
-          />
-        )}
-        {product.images?.length > 1 && (
-          <View style={styles.dotsContainer}>
-            {product.images.map((_, index) => (
-              <View
-                key={index}
-                style={[styles.dot, index === activeIndex && styles.activeDot]}
-              />
-            ))}
-          </View>
-        )}
+        <ImageCarousel
+          images={product.images}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+          carouselRef={carouselRef}
+        />
 
         <View style={styles.content}>
-          {/* Price & Rating */}
-          <View style={styles.priceRow}>
-            <Text style={styles.price}>₹{product.price}</Text>
-            <Text style={styles.rating}>
-              ★ {product.rating} ({product.reviewsCount})
-            </Text>
-          </View>
+          <Text style={styles.price}>₹{product.price}</Text>
 
-          {/* Options */}
-          {product.options?.colors.length > 0 && (
-            <View style={styles.optionGroup}>
-              <Text style={styles.optionLabel}>Color</Text>
-              <View style={styles.optionRow}>
-                {product.options.colors.map((color: string) => (
-                  <TouchableOpacity
-                    key={color}
-                    style={[
-                      styles.optionChip,
-                      selectedColor === color && styles.optionChipActive,
-                    ]}
-                    onPress={() => setSelectedColor(color)}
-                  >
-                    <Text>{color}</Text>
-                  </TouchableOpacity>
-                ))}
-              </View>
-            </View>
-          )}
+          <ProductOptions
+            label="Color"
+            options={product.options?.colors ?? []}
+            selected={selectedColor}
+            onSelect={setSelectedColor}
+          />
 
-          {product.options?.sizes.length > 0 && (
-            <View style={styles.optionGroup}>
-              <Text style={styles.optionLabel}>Size</Text>
-              <View style={styles.optionRow}>
-                {product.options.sizes.map((size: string) => (
-                  <TouchableOpacity
-                    key={size}
-                    style={[
-                      styles.optionChip,
-                      selectedSize === size && styles.optionChipActive,
-                    ]}
-                    onPress={() => setSelectedSize(size)}
-                  >
-                    <Text>{size}</Text>
-                  </TouchableOpacity>
-                ))}
-              </View>
-            </View>
-          )}
+          <ProductOptions
+            label="Size"
+            options={product.options?.sizes ?? []}
+            selected={selectedSize}
+            onSelect={setSelectedSize}
+          />
 
-          {/* Description */}
           <Text
             numberOfLines={expanded ? undefined : 3}
             style={styles.description}
@@ -249,131 +84,20 @@ const ProductDetailsScreen = () => {
             {product.description}
           </Text>
 
-          <TouchableOpacity onPress={() => setExpanded(!expanded)}>
-            <Text style={styles.readMore}>
-              {expanded ? 'Show less' : 'Read more'}
-            </Text>
-          </TouchableOpacity>
+          <Text style={styles.readMore} onPress={() => setExpanded(!expanded)}>
+            {expanded ? 'Show less' : 'Read more'}
+          </Text>
         </View>
       </ScrollView>
 
-      {/* Add to Cart */}
-      <TouchableOpacity
-        // disabled={!canAddToCart}
-        onPress={handleAddToCart}
-        style={[
-          styles.addButton,
-          // !canAddToCart && { backgroundColor: colors.lightGreen, opacity: 0.5 },
-        ]}
-      >
-        <Text style={styles.addButtonText}>
-          {product.stock === 0 ? 'Out of Stock' : 'Add to Cart'}
-        </Text>
-      </TouchableOpacity>
+      <Button
+        title={product.stock === 0 ? 'Out of stock' : 'Add to cart'}
+        onPress={addToCartHandler}
+        variant="solid"
+        style={styles.addButton}
+      />
     </View>
   );
 };
 
 export default ProductDetailsScreen;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: colors.backgroundDarkGreenDark,
-  },
-  scrollview: {
-    paddingBottom: 120,
-  },
-  center: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  errorText: {
-    color: colors.lightGreen,
-  },
-
-  image: {
-    width: width,
-    height: 320,
-  },
-  content: {
-    padding: 16,
-  },
-  priceRow: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginBottom: 12,
-  },
-  price: {
-    fontSize: 22,
-    color: colors.mainGreen,
-    fontFamily: FontFamily.poppins.semiBold,
-  },
-  rating: {
-    color: colors.lightGreen,
-  },
-  optionGroup: {
-    marginBottom: 12,
-  },
-  optionLabel: {
-    color: colors.lightGreen,
-    marginBottom: 6,
-  },
-  optionRow: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-  },
-  optionChip: {
-    paddingHorizontal: 12,
-    paddingVertical: 6,
-    borderRadius: 16,
-    backgroundColor: colors.lightGreen,
-    marginRight: 8,
-    marginBottom: 8,
-  },
-  optionChipActive: {
-    backgroundColor: colors.mainGreen,
-  },
-  description: {
-    color: colors.lightGreen,
-    lineHeight: 22,
-    marginTop: 12,
-  },
-  readMore: {
-    color: colors.mainGreen,
-    marginTop: 6,
-  },
-  addButton: {
-    position: 'absolute',
-    bottom: 20,
-    left: 16,
-    right: 16,
-    paddingVertical: 14,
-    borderRadius: 16,
-    backgroundColor: colors.mainGreen,
-  },
-  addButtonText: {
-    textAlign: 'center',
-    fontFamily: FontFamily.poppins.semiBold,
-    color: colors.backgroundDarkGreenDark,
-    fontSize: 16,
-  },
-  dotsContainer: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    marginTop: 10,
-  },
-  dot: {
-    width: 8,
-    height: 8,
-    borderRadius: 4,
-    backgroundColor: 'rgba(255,255,255,0.4)',
-    marginHorizontal: 4,
-  },
-  activeDot: {
-    backgroundColor: colors.mainGreen,
-    width: 10,
-    height: 10,
-  },
-});
