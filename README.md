@@ -1,97 +1,298 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# 🛒 FinWiseApp – React Native E‑Commerce App
 
-# Getting Started
+FinWiseApp is a **React Native CLI–based e‑commerce mobile application** built as a complete end‑to‑end demo.  
+It uses a **mock backend (JSON Server)** with **token‑based authentication**, user‑scoped cart and orders, and a clean hook‑driven architecture.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+---
 
-## Step 1: Start Metro
+## 📱 Features
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+### 🔐 Authentication
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+- Register & Login
+- Token generated on every login/signup
+- Token persisted using **AsyncStorage**
+- Auto‑login on app relaunch
+- Logout clears token and resets navigation stack
+- `401 Unauthorized` → auto logout
 
-```sh
-# Using npm
-npm start
+---
 
-# OR using Yarn
-yarn start
+### 🛍️ Product Catalog
+
+- Product list with infinite scroll (pagination)
+- Pull‑to‑refresh
+- Search with debounce (≤ 400ms)
+- Category filter
+- Empty state handling
+
+---
+
+### 📦 Product Details
+
+- Image carousel with auto‑scroll
+- Dot indicators
+- Product options (Color / Size)
+- Option validation before add‑to‑cart
+- Stock‑aware Add to Cart button
+
+---
+
+### 🛒 Cart
+
+- Add / remove items
+- Increment / decrement quantity
+- Auto‑calculated:
+  - Subtotal
+  - Tax
+  - Total
+- Cart is **user‑scoped**
+- Empty cart UI
+- Cart cleared after checkout
+
+---
+
+### 💳 Checkout
+
+- Address form with validation
+- Payment method (COD / Mock Card)
+- Sequential order ID generation  
+  Example:
+  ```
+  ord_1001
+  ord_1002
+  ```
+- Order saved with `userId`
+- Cart cleared on success
+
+---
+
+### 📑 Orders
+
+- Orders list (user‑based)
+- Order details screen
+- Pagination
+- Sorted by latest order
+- Pull‑to‑refresh
+
+---
+
+## 🧱 Tech Stack
+
+| Category   | Tech                            |
+| ---------- | ------------------------------- |
+| Language   | TypeScript                      |
+| Framework  | React Native CLI                |
+| Navigation | React Navigation (Stack + Tabs) |
+| State      | Custom Hooks                    |
+| Backend    | JSON Server                     |
+| Storage    | AsyncStorage                    |
+| API        | Fetch wrapper (`request()`)     |
+| Styling    | StyleSheet                      |
+| Platform   | Android & iOS                   |
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+├── api/
+│   ├── auth.api.ts
+│   ├── product.api.ts
+│   ├── cart.api.ts
+│   ├── checkout.api.ts
+│   ├── orders.api.ts
+│   └── http.ts
+│
+├── models/
+│   ├── ProductModel.ts
+│   ├── CartModel.ts
+│   ├── OrderModel.ts
+│
+├── hooks/
+│   ├── useCart.ts
+│   ├── useOrders.ts
+│
+├── components/
+│   ├── CartItem.tsx
+│   ├── TextField.tsx
+│   ├── Button.tsx
+│   ├── TabIcon.tsx
+│
+├── screens/
+│   ├── onboarding/
+│   ├── tabs/
+│   │   ├── home/
+│   │   ├── cart/
+│   │   └── order/
+│
+├── utils/
+│   ├── storage.ts
+│   ├── token.ts
+│
+└── config/
+    └── constants.ts
 ```
 
-## Step 2: Build and run your app
+---
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+## 🌐 Backend (JSON Server)
+
+### Install JSON Server
+
+```bash
+npm install -g json-server
+```
+
+### Run Backend
+
+```bash
+json-server --watch db.json --port 3000
+```
+
+---
+
+## ⚠️ Android Emulator Networking
+
+| Platform         | BASE_URL              |
+| ---------------- | --------------------- |
+| Android Emulator | http://10.0.2.2:3000  |
+| iOS Simulator    | http://localhost:3000 |
+
+### `src/config/constants.ts`
+
+```ts
+import { Platform } from 'react-native';
+
+export const BASE_URL =
+  Platform.OS === 'android' ? 'http://10.0.2.2:3000' : 'http://localhost:3000';
+
+export const TAX_RATE = 0.09;
+```
+
+---
+
+## 🔐 Authentication Design
+
+- Token stored in `users.token`
+- Token sent via `Authorization` header
+- All user data is filtered using `userId`
+- Example:
+
+```http
+Authorization: Bearer <token>
+```
+
+### Auto Logout
+
+- Any `401` response clears token
+- App redirects to Login screen
+
+---
+
+## 🧾 Order ID Strategy
+
+Sequential per user:
+
+```
+ord_1001
+ord_1002
+ord_1003
+```
+
+Logic:
+
+- Fetch orders for current user
+- Extract numeric part
+- Increment max value safely
+
+---
+
+## ▶️ Running the App
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Start Metro
+
+```bash
+npm start
+```
 
 ### Android
 
-```sh
-# Using npm
-npm run android
-
-# OR using Yarn
-yarn android
+```bash
+npx react-native run-android
 ```
 
 ### iOS
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
+```bash
+npx react-native run-ios
 ```
 
-Then, and every time you update your native dependencies, run:
+---
 
-```sh
-bundle exec pod install
+## ⚙️ Android Setup (First Time)
+
+Required:
+
+- Android Studio
+- JDK 17
+- Android SDK & Emulator
+
+Check setup:
+
+```bash
+npx react-native doctor
 ```
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+If emulator error:
 
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
+```bash
+emulator -list-avds
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+---
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+## 🧪 Debugging
 
-## Step 3: Modify your app
+- `console.log()` for quick checks
+- `debugLog()` utility for controlled logs
+- Chrome / Flipper supported
 
-Now that you have successfully run the app, let's make changes!
+---
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+## 🚀 Future Improvements
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+- Wishlist
+- Price sorting
+- Dark mode
+- API pagination metadata
+- Unit tests (Jest)
+- Real backend integration
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+---
 
-## Congratulations! :tada:
+## ✅ Status
 
-You've successfully run and modified your React Native App. :partying_face:
+✔ Authentication  
+✔ Catalog  
+✔ Product Details  
+✔ Cart  
+✔ Checkout  
+✔ Orders  
+✔ Token Handling  
+✔ User‑scoped Data  
+✔ Navigation Reset on Logout
 
-### Now what?
+---
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+## 👨‍💻 Author
 
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+**Kanak Yadav**  
+React Native Developer
