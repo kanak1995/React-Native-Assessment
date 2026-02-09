@@ -2,6 +2,8 @@ import { BASE_URL } from '../config/constants';
 import { clearCart, getCart } from './cart.api';
 import { request } from './http';
 import { OrderModel } from '../models/OrderModel';
+import { getCurrentUser } from './auth.helper';
+import { debugLog } from '../../logger';
 
 /* ======================= */
 /* Types */
@@ -37,7 +39,9 @@ export async function placeOrder(
 ): Promise<CheckoutResponse> {
   // 1️⃣ Get cart
   const cart = await getCart();
-
+  const user = await getCurrentUser();
+  debugLog(user);
+  debugLog('placeOrder', cart);
   // 2️⃣ Fetch existing orders
   if (!cart.items.length) {
     throw new Error('Cart is empty');
@@ -45,10 +49,12 @@ export async function placeOrder(
 
   const existingOrders = await request<OrderModel[]>(`${BASE_URL}/orders`);
   // 3️⃣ Generate sequential order ID
+  debugLog('existingOrders', existingOrders);
   const orderId = generateNextOrderId(existingOrders);
-
+  debugLog('orderId', orderId);
   const orderPayload = {
     id: orderId,
+    userId: user.id,
     status: 'processing',
     amount: cart.total,
     createdAt: new Date().toISOString(),
@@ -76,12 +82,20 @@ export async function placeOrder(
 export function generateNextOrderId(orders: OrderModel[]): string {
   const base = 1000;
 
-  if (!orders.length) {
+  const numbers = orders
+    .map(o => {
+      if (typeof o.id !== 'string') return null;
+      if (!o.id.startsWith('ord_')) return null;
+
+      const n = Number(o.id.replace('ord_', ''));
+      return Number.isFinite(n) ? n : null;
+    })
+    .filter((n): n is number => n !== null);
+
+  if (!numbers.length) {
     return `ord_${base + 1}`;
   }
 
-  const lastOrder = orders[orders.length - 1];
-  const lastNumber = Number(lastOrder.id.replace('ord_', ''));
-
-  return `ord_${lastNumber + 1}`;
+  const max = Math.max(...numbers);
+  return `ord_${max + 1}`;
 }

@@ -16,8 +16,8 @@ import {
   useFocusEffect,
 } from '@react-navigation/native';
 import Screens from '../Screen';
-import { loginApi } from '../../api/authapi';
-import { saveToken } from '../../utils/storage';
+import { loginApi } from '../../api/auth.api';
+import { saveToken, saveUserId } from '../../utils/storage';
 
 const LoginScreen = () => {
   const [email, setEmail] = useState('');
@@ -27,8 +27,9 @@ const LoginScreen = () => {
 
   const loginHandler = async () => {
     try {
-      const res = await loginApi(email, password);
+      const res = await loginApi(email.toLocaleLowerCase(), password);
       await saveToken(res.token);
+      await saveUserId(res.user.id.toString());
       navigation.navigate(Screens.MainTabs);
     } catch (err: any) {
       console.log(err.message);

@@ -74,9 +74,14 @@ export const styles = StyleSheet.create({
     fontSize: 12,
     fontFamily: FontFamily.poppins.medium,
   },
+  emptyContainer: {
+    flexGrow: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   empty: {
-    textAlign: 'center',
-    marginTop: 40,
     color: colors.lightGreen,
+    fontFamily: FontFamily.poppins.semiBold,
+    fontSize: 20,
   },
 });

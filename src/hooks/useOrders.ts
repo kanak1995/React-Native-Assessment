@@ -32,7 +32,6 @@ export function useOrders() {
   }, []);
 
   const logoutHandle = async () => {
-    console.log('djshfkhkj');
     await clearToken();
 
     navigation.dispatch(

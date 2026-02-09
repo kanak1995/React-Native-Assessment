@@ -1,5 +1,6 @@
 export interface CartItemModel {
   id?: number;
+  userId: string;
   productId: string;
   title: string;
   thumbnail: string;

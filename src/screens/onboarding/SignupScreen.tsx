@@ -11,10 +11,9 @@ import BottomSheet from '../../components/BottomSheet';
 import TextField from '../../components/TextField';
 import Button from '../../components/Button';
 import { useNavigation, NavigationProp } from '@react-navigation/native';
-// import Screens from '../Screen';
 import { isValidEmail, isValidPassword } from '../../utils/validation';
-import { registerApi } from '../../api/authapi';
-import { saveToken } from '../../utils/storage';
+import { registerApi } from '../../api/auth.api';
+import { saveToken, saveUserId } from '../../utils/storage';
 import Screens from '../Screen';
 
 const isValidName = (name: string) => name.trim().length >= 2;
@@ -34,8 +33,9 @@ const SignupScreen = () => {
     if (!isValid) return;
 
     try {
-      const res = await registerApi(name, email, password);
+      const res = await registerApi(name, email.toLocaleLowerCase(), password);
       await saveToken(res.token);
+      await saveUserId(res.user.id.toString());
       navigation.navigate(Screens.MainTabs);
     } catch (err: any) {
       Alert.alert(
@@ -156,7 +156,6 @@ const SignupScreen = () => {
         <View style={styles.button}>
           <Button
             title="Create Account"
-            width={200}
             onPress={signupHandler}
             variant="soft"
           />

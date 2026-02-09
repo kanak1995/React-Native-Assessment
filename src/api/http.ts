@@ -1,25 +1,10 @@
-// export async function request<T>(
-//   url: string,
-//   options: RequestInit = {},
-// ): Promise<T> {
-//   const response = await fetch(url, {
-//     headers: {
-//       'Content-Type': 'application/json',
-//       ...(options.headers || {}),
-//     },
-//     ...options,
-//   });
+import { clearToken, getToken } from '../utils/storage';
 
-import { getToken, clearToken } from '../utils/storage';
 export async function request<T>(
   url: string,
-  options: RequestInit = {},
+  options: RequestInit & { skipAuth?: boolean } = {},
 ): Promise<T> {
-  const token = await getToken();
-  // console.log('.....................token..............', token);
-  // await saveToken(token + 'kanak');
-  // const newtoken = await getToken();
-  // console.log('.....................token..............', newtoken);
+  const token = options.skipAuth ? null : await getToken();
 
   const headers: HeadersInit_ = {
     ...(options.headers || {}),
@@ -32,18 +17,13 @@ export async function request<T>(
     headers,
   });
 
-  // 🔴 HANDLE AUTH ERROR HERE
-  if (response.status === 401) {
-    await clearToken(); // logout
+  if (response.status === 401 && !options.skipAuth) {
+    await clearToken();
+    throw new Error('Unauthorized');
   }
 
   if (!response.ok) {
-    let errorBody: any = null;
-
-    try {
-      errorBody = await response.json();
-    } catch {}
-
+    const errorBody = await response.json().catch(() => null);
     throw new Error(
       errorBody?.message || `Request failed (${response.status})`,
     );

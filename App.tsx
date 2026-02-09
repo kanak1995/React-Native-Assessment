@@ -37,31 +37,6 @@ export type RootStackParamList = {
 const Stack = createNativeStackNavigator<RootStackParamList>();
 const Tab = createBottomTabNavigator();
 
-/* ------------------ TAB NAVIGATOR ------------------ */
-const TabNavigator = React.memo(() => (
-  <Tab.Navigator screenOptions={commonTabOptions}>
-    <Tab.Screen
-      name={Screens.HomeScreen}
-      component={HomeScreen}
-      options={{ title: 'Home', tabBarIcon: renderHomeIcon }}
-    />
-    <Tab.Screen
-      name={Screens.CartScreen}
-      component={CartScreen}
-      options={{ title: 'Cart', tabBarIcon: renderCartIcon }}
-    />
-    <Tab.Screen
-      name={Screens.OrdersScreen}
-      component={OrdersScreen}
-      options={{
-        title: 'Orders',
-        tabBarIcon: renderOrderIcon,
-        headerTitle: '',
-      }}
-    />
-  </Tab.Navigator>
-));
-
 /* ------------------ APP ROOT ------------------ */
 export default function App() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -76,7 +51,7 @@ export default function App() {
       setAuthState(token ? 'authenticated' : 'unauthenticated');
     };
     checkAuth();
-  }, []); // ✅ RUN ONCE
+  }, []);
 
   if (authState === 'loading') {
     return null; // Splash screen here
@@ -149,6 +124,31 @@ export default function App() {
     </NavigationContainer>
   );
 }
+
+/* ------------------ TAB NAVIGATOR ------------------ */
+const TabNavigator = React.memo(() => (
+  <Tab.Navigator screenOptions={commonTabOptions}>
+    <Tab.Screen
+      name={Screens.HomeScreen}
+      component={HomeScreen}
+      options={{ title: 'Home', tabBarIcon: renderHomeIcon }}
+    />
+    <Tab.Screen
+      name={Screens.CartScreen}
+      component={CartScreen}
+      options={{ title: 'Cart', tabBarIcon: renderCartIcon }}
+    />
+    <Tab.Screen
+      name={Screens.OrdersScreen}
+      component={OrdersScreen}
+      options={{
+        title: 'Orders',
+        tabBarIcon: renderOrderIcon,
+        headerTitle: '',
+      }}
+    />
+  </Tab.Navigator>
+));
 
 /* ------------------ TAB OPTIONS ------------------ */
 const commonTabOptions: BottomTabNavigationOptions = {

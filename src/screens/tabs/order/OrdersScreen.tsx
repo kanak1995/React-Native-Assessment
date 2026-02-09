@@ -31,7 +31,10 @@ const OrdersScreen = () => {
             }
           />
         )}
-        contentContainerStyle={styles.contentContainerStyle}
+        contentContainerStyle={[
+          styles.contentContainerStyle,
+          orders.length === 0 && !loading && styles.emptyContainer,
+        ]}
         onRefresh={onRefresh}
         refreshing={refreshing}
         onEndReached={onLoadMore}
