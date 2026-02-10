@@ -22,10 +22,12 @@ import { saveToken, saveUserId } from '../../utils/storage';
 const LoginScreen = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState<string | null>(null);
 
   const navigation = useNavigation<NavigationProp<any>>();
 
   const loginHandler = async () => {
+    setError(null);
     try {
       const res = await loginApi(email.toLocaleLowerCase(), password);
       await saveToken(res.token);
@@ -33,9 +35,7 @@ const LoginScreen = () => {
       navigation.navigate(Screens.MainTabs);
     } catch (err: any) {
       console.log(err.message);
-      Alert.alert('Login Failed', err?.message || 'Something went wrong', [
-        { text: 'OK' },
-      ]);
+      setError(err?.message || 'Something went wrong');
     }
   };
 
@@ -47,6 +47,7 @@ const LoginScreen = () => {
     useCallback(() => {
       setEmail('');
       setPassword('');
+      setError(null);
       return () => {};
     }, []),
   );
@@ -77,6 +78,7 @@ const LoginScreen = () => {
           rightIcon="eyeClosed"
           style={styles.textFieldPassword}
         />
+        {error ? <Text style={styles.errorText}>{error}</Text> : null}
         <View style={styles.button}>
           <Button
             title="Log In"

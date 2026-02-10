@@ -304,6 +304,16 @@ emulator -list-avds
 
 ---
 
+## 🧪 Testing
+
+### Run Unit Tests
+
+```bash
+npm test
+```
+
+---
+
 ## 🧪 Debugging
 
 - `console.log()` for quick checks
@@ -318,7 +328,6 @@ emulator -list-avds
 - Price sorting
 - Dark mode
 - API pagination metadata
-- Unit tests (Jest)
 - Real backend integration
 
 ---
@@ -334,6 +343,7 @@ emulator -list-avds
 ✔ Token Handling  
 ✔ User‑scoped Data  
 ✔ Navigation Reset on Logout
+✔ Unit tests (Jest)
 
 ---
 

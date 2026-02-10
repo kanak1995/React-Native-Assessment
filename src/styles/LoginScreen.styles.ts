@@ -49,4 +49,11 @@ export const styles = StyleSheet.create({
     marginTop: 10,
     alignSelf: 'center',
   },
+  errorText: {
+    fontFamily: FontFamily.poppins.regular,
+    fontSize: 12,
+    color: 'red',
+    paddingHorizontal: 36,
+    marginTop: 5,
+  },
 });
