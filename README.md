@@ -7,8 +7,9 @@ It uses a **mock backend (JSON Server)** with **token‑based authentication**, 
 
 ## 📱 Features
 
-### 🔐 Authentication
+### 🔐 Authentication & Onboarding
 
+- **Onboarding Flow**: Get Started -> Welcome -> Login/Signup
 - Register & Login
 - Token generated on every login/signup
 - Token persisted using **AsyncStorage**
@@ -88,7 +89,9 @@ It uses a **mock backend (JSON Server)** with **token‑based authentication**, 
 | Backend    | JSON Server                     |
 | Storage    | AsyncStorage                    |
 | API        | Fetch wrapper (`request()`)     |
-| Styling    | StyleSheet                      |
+| Styling    | StyleSheet & Themed Styles      |
+| UI Library | Vector Icons, SVG Support       |
+| Utilities  | Safe Area Context               |
 | Platform   | Android & iOS                   |
 
 ---
@@ -99,40 +102,82 @@ It uses a **mock backend (JSON Server)** with **token‑based authentication**, 
 src/
 ├── api/
 │   ├── auth.api.ts
-│   ├── product.api.ts
+│   ├── auth.helper.ts
 │   ├── cart.api.ts
+│   ├── category.api.ts
 │   ├── checkout.api.ts
+│   ├── http.ts
 │   ├── orders.api.ts
-│   └── http.ts
+│   └── product.api.ts
 │
-├── models/
-│   ├── ProductModel.ts
-│   ├── CartModel.ts
-│   ├── OrderModel.ts
+├── components/
+│   ├── Button/
+│   ├── Icon/
+│   ├── TextField/
+│   ├── BottomSheet.tsx
+│   ├── CartItem.tsx
+│   ├── CategoryPicker.tsx
+│   ├── ImageCarousel.tsx
+│   ├── OrderItem.tsx
+│   ├── Pagination.tsx
+│   ├── ProductCard.tsx
+│   ├── ProductOptions.tsx
+│   ├── SearchBar.tsx
+│   └── TabIcon.tsx
+│
+├── config/
+│   └── constants.ts
 │
 ├── hooks/
 │   ├── useCart.ts
+│   ├── useCheckout.ts
+│   ├── useHomeProducts.ts
+│   ├── useOrderDetails.ts
 │   ├── useOrders.ts
+│   └── useProductDetails.ts
 │
-├── components/
-│   ├── CartItem.tsx
-│   ├── TextField.tsx
-│   ├── Button.tsx
-│   ├── TabIcon.tsx
+├── models/
+│   ├── CartModel.ts
+│   ├── OrderModel.ts
+│   └── ProductModel.ts
 │
 ├── screens/
 │   ├── onboarding/
-│   ├── tabs/
-│   │   ├── home/
-│   │   ├── cart/
-│   │   └── order/
+│   │   ├── GetStartedScreen.tsx
+│   │   ├── LoginScreen.tsx
+│   │   ├── SignupScreen.tsx
+│   │   └── WelcomeScreen.tsx
+│   │
+│   └── tabs/
+│       ├── home/
+│       │   ├── HomeScreen.tsx
+│       │   └── ProductDetailsScreen.tsx
+│       ├── cart/
+│       │   ├── CartScreen.tsx
+│       │   ├── CheckoutScreen.tsx
+│       │   └── OrderSuccessScreen.tsx
+│       └── order/
+│           ├── OrdersScreen.tsx
+│           └── OrderDetailsScreen.tsx
 │
-├── utils/
-│   ├── storage.ts
-│   ├── token.ts
+├── styles/
+│   ├── CartScreen.styles.ts
+│   ├── HomeScreen.styles.ts
+│   └── ... (Screen-specific styles)
 │
-└── config/
-    └── constants.ts
+├── theme/
+│   ├── colors.ts
+│   ├── fonts.ts
+│   └── typography.ts
+│
+├── types/
+│   └── svg.d.ts
+│
+└── utils/
+    ├── authEvents.ts
+    ├── storage.ts
+    ├── token.ts
+    └── validation.ts
 ```
 
 ---

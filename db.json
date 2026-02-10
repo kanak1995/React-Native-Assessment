@@ -13,6 +13,13 @@
       "password": "Kanak@123",
       "token": "nu3fd6ko3immldj4f7g",
       "id": 2
+    },
+    {
+      "name": "Kanak Yadav",
+      "email": "kanak14@gmail.com",
+      "password": "Kanak@123",
+      "token": "oa72cs4i7cdmlev176y",
+      "id": 3
     }
   ],
   "products": [
@@ -32,8 +39,17 @@
         "https://picsum.photos/600/600?random=6"
       ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4.4,
       "reviewsCount": 87,
@@ -48,10 +64,21 @@
       "price": 29.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=61",
-      "images": ["https://picsum.photos/600/600?random=62"],
+      "images": [
+        "https://picsum.photos/600/600?random=62"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4.6,
       "reviewsCount": 132,
@@ -66,10 +93,21 @@
       "price": 49.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=4",
-      "images": ["https://picsum.photos/600/600?random=4"],
+      "images": [
+        "https://picsum.photos/600/600?random=4"
+      ],
       "options": {
-        "colors": ["black", "blue", "navy"],
-        "sizes": ["30", "32", "34", "36"]
+        "colors": [
+          "black",
+          "blue",
+          "navy"
+        ],
+        "sizes": [
+          "30",
+          "32",
+          "34",
+          "36"
+        ]
       },
       "rating": 4.3,
       "reviewsCount": 96,
@@ -91,8 +129,18 @@
         "https://picsum.photos/600/600?random=66"
       ],
       "options": {
-        "colors": ["black", "white", "grey"],
-        "sizes": ["7", "8", "9", "10", "11"]
+        "colors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "sizes": [
+          "7",
+          "8",
+          "9",
+          "10",
+          "11"
+        ]
       },
       "rating": 4.7,
       "reviewsCount": 210,
@@ -107,10 +155,22 @@
       "price": 39.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=6",
-      "images": ["https://picsum.photos/600/600?random=6"],
+      "images": [
+        "https://picsum.photos/600/600?random=6"
+      ],
       "options": {
-        "colors": ["black", "white", "grey"],
-        "sizes": ["7", "8", "9", "10", "11"]
+        "colors": [
+          "black",
+          "white",
+          "grey"
+        ],
+        "sizes": [
+          "7",
+          "8",
+          "9",
+          "10",
+          "11"
+        ]
       },
       "rating": 4.2,
       "reviewsCount": 64,
@@ -125,9 +185,15 @@
       "price": 14.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=7",
-      "images": ["https://picsum.photos/600/600?random=7"],
+      "images": [
+        "https://picsum.photos/600/600?random=7"
+      ],
       "options": {
-        "colors": ["black", "brown", "tan"],
+        "colors": [
+          "black",
+          "brown",
+          "tan"
+        ],
         "sizes": []
       },
       "rating": 4.1,
@@ -143,9 +209,15 @@
       "price": 99.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=8",
-      "images": ["https://picsum.photos/600/600?random=8"],
+      "images": [
+        "https://picsum.photos/600/600?random=8"
+      ],
       "options": {
-        "colors": ["black", "brown", "silver"],
+        "colors": [
+          "black",
+          "brown",
+          "silver"
+        ],
         "sizes": []
       },
       "rating": 4.8,
@@ -161,9 +233,15 @@
       "price": 9.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=9",
-      "images": ["https://picsum.photos/600/600?random=9"],
+      "images": [
+        "https://picsum.photos/600/600?random=9"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
         "sizes": []
       },
       "rating": 4,
@@ -179,10 +257,21 @@
       "price": 34.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=10",
-      "images": ["https://picsum.photos/600/600?random=10"],
+      "images": [
+        "https://picsum.photos/600/600?random=10"
+      ],
       "options": {
-        "colors": ["black", "grey", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "grey",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4.5,
       "reviewsCount": 118,
@@ -197,10 +286,19 @@
       "price": 12.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=11",
-      "images": ["https://picsum.photos/600/600?random=11"],
+      "images": [
+        "https://picsum.photos/600/600?random=11"
+      ],
       "options": {
-        "colors": ["black", "brown"],
-        "sizes": ["M", "L", "XL"]
+        "colors": [
+          "black",
+          "brown"
+        ],
+        "sizes": [
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4.2,
       "reviewsCount": 48,
@@ -215,10 +313,21 @@
       "price": 59.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=12",
-      "images": ["https://picsum.photos/600/600?random=12"],
+      "images": [
+        "https://picsum.photos/600/600?random=12"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4.5,
       "reviewsCount": 142,
@@ -233,10 +342,21 @@
       "price": 69.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=13",
-      "images": ["https://picsum.photos/600/600?random=13"],
+      "images": [
+        "https://picsum.photos/600/600?random=13"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4.6,
       "reviewsCount": 189,
@@ -251,10 +371,21 @@
       "price": 44.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=14",
-      "images": ["https://picsum.photos/600/600?random=14"],
+      "images": [
+        "https://picsum.photos/600/600?random=14"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4.4,
       "reviewsCount": 96,
@@ -269,10 +400,21 @@
       "price": 18.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=15",
-      "images": ["https://picsum.photos/600/600?random=15"],
+      "images": [
+        "https://picsum.photos/600/600?random=15"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4.2,
       "reviewsCount": 54,
@@ -287,10 +429,21 @@
       "price": 119.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=16",
-      "images": ["https://picsum.photos/600/600?random=16"],
+      "images": [
+        "https://picsum.photos/600/600?random=16"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4.7,
       "reviewsCount": 211,
@@ -305,10 +458,21 @@
       "price": 129.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=17",
-      "images": ["https://picsum.photos/600/600?random=17"],
+      "images": [
+        "https://picsum.photos/600/600?random=17"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4.8,
       "reviewsCount": 320,
@@ -323,10 +487,21 @@
       "price": 24.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=18",
-      "images": ["https://picsum.photos/600/600?random=18"],
+      "images": [
+        "https://picsum.photos/600/600?random=18"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4.3,
       "reviewsCount": 88,
@@ -341,10 +516,21 @@
       "price": 54.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=19",
-      "images": ["https://picsum.photos/600/600?random=19"],
+      "images": [
+        "https://picsum.photos/600/600?random=19"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4.4,
       "reviewsCount": 77,
@@ -359,10 +545,21 @@
       "price": 21.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=20",
-      "images": ["https://picsum.photos/600/600?random=20"],
+      "images": [
+        "https://picsum.photos/600/600?random=20"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4.1,
       "reviewsCount": 61,
@@ -377,10 +574,21 @@
       "price": 49.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=21",
-      "images": ["https://picsum.photos/600/600?random=21"],
+      "images": [
+        "https://picsum.photos/600/600?random=21"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4.6,
       "reviewsCount": 143,
@@ -395,10 +603,21 @@
       "price": 22.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=22",
-      "images": ["https://picsum.photos/600/600?random=22"],
+      "images": [
+        "https://picsum.photos/600/600?random=22"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4.2,
       "reviewsCount": 69,
@@ -413,10 +632,21 @@
       "price": 16.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=23",
-      "images": ["https://picsum.photos/600/600?random=23"],
+      "images": [
+        "https://picsum.photos/600/600?random=23"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4,
       "reviewsCount": 33,
@@ -431,10 +661,21 @@
       "price": 11.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=24",
-      "images": ["https://picsum.photos/600/600?random=24"],
+      "images": [
+        "https://picsum.photos/600/600?random=24"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4.1,
       "reviewsCount": 41,
@@ -449,10 +690,21 @@
       "price": 99.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=25",
-      "images": ["https://picsum.photos/600/600?random=25"],
+      "images": [
+        "https://picsum.photos/600/600?random=25"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4.8,
       "reviewsCount": 256,
@@ -467,10 +719,21 @@
       "price": 26.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=26",
-      "images": ["https://picsum.photos/600/600?random=26"],
+      "images": [
+        "https://picsum.photos/600/600?random=26"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4.3,
       "reviewsCount": 82,
@@ -485,10 +748,21 @@
       "price": 19.49,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=27",
-      "images": ["https://picsum.photos/600/600?random=27"],
+      "images": [
+        "https://picsum.photos/600/600?random=27"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4.4,
       "reviewsCount": 58,
@@ -503,10 +777,21 @@
       "price": 8.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=28",
-      "images": ["https://picsum.photos/600/600?random=28"],
+      "images": [
+        "https://picsum.photos/600/600?random=28"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 3.9,
       "reviewsCount": 25,
@@ -521,10 +806,21 @@
       "price": 6.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=29",
-      "images": ["https://picsum.photos/600/600?random=29"],
+      "images": [
+        "https://picsum.photos/600/600?random=29"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4,
       "reviewsCount": 47,
@@ -539,10 +835,21 @@
       "price": 17.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=30",
-      "images": ["https://picsum.photos/600/600?random=30"],
+      "images": [
+        "https://picsum.photos/600/600?random=30"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4.2,
       "reviewsCount": 66,
@@ -557,10 +864,21 @@
       "price": 21.49,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=31",
-      "images": ["https://picsum.photos/600/600?random=31"],
+      "images": [
+        "https://picsum.photos/600/600?random=31"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4.5,
       "reviewsCount": 101,
@@ -575,10 +893,21 @@
       "price": 22.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=32",
-      "images": ["https://picsum.photos/600/600?random=32"],
+      "images": [
+        "https://picsum.photos/600/600?random=32"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4.3,
       "reviewsCount": 71,
@@ -593,10 +922,21 @@
       "price": 28.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=33",
-      "images": ["https://picsum.photos/600/600?random=33"],
+      "images": [
+        "https://picsum.photos/600/600?random=33"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4.4,
       "reviewsCount": 83,
@@ -611,10 +951,21 @@
       "price": 67.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=34",
-      "images": ["https://picsum.photos/600/600?random=34"],
+      "images": [
+        "https://picsum.photos/600/600?random=34"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4.6,
       "reviewsCount": 149,
@@ -629,10 +980,21 @@
       "price": 84.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=35",
-      "images": ["https://picsum.photos/600/600?random=35"],
+      "images": [
+        "https://picsum.photos/600/600?random=35"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4.7,
       "reviewsCount": 178,
@@ -647,10 +1009,21 @@
       "price": 31.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=36",
-      "images": ["https://picsum.photos/600/600?random=36"],
+      "images": [
+        "https://picsum.photos/600/600?random=36"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4.5,
       "reviewsCount": 92,
@@ -665,10 +1038,21 @@
       "price": 19.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=37",
-      "images": ["https://picsum.photos/600/600?random=37"],
+      "images": [
+        "https://picsum.photos/600/600?random=37"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4.2,
       "reviewsCount": 61,
@@ -683,10 +1067,21 @@
       "price": 71.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=38",
-      "images": ["https://picsum.photos/600/600?random=38"],
+      "images": [
+        "https://picsum.photos/600/600?random=38"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4.6,
       "reviewsCount": 164,
@@ -701,10 +1096,21 @@
       "price": 52.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=39",
-      "images": ["https://picsum.photos/600/600?random=39"],
+      "images": [
+        "https://picsum.photos/600/600?random=39"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4.6,
       "reviewsCount": 137,
@@ -719,10 +1125,21 @@
       "price": 26.49,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=40",
-      "images": ["https://picsum.photos/600/600?random=40"],
+      "images": [
+        "https://picsum.photos/600/600?random=40"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4.3,
       "reviewsCount": 85,
@@ -737,10 +1154,21 @@
       "price": 109.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=41",
-      "images": ["https://picsum.photos/600/600?random=41"],
+      "images": [
+        "https://picsum.photos/600/600?random=41"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4.7,
       "reviewsCount": 261,
@@ -755,10 +1183,21 @@
       "price": 25.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=42",
-      "images": ["https://picsum.photos/600/600?random=42"],
+      "images": [
+        "https://picsum.photos/600/600?random=42"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4.3,
       "reviewsCount": 73,
@@ -773,10 +1212,21 @@
       "price": 23.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=43",
-      "images": ["https://picsum.photos/600/600?random=43"],
+      "images": [
+        "https://picsum.photos/600/600?random=43"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4.2,
       "reviewsCount": 66,
@@ -791,10 +1241,21 @@
       "price": 74.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=44",
-      "images": ["https://picsum.photos/600/600?random=44"],
+      "images": [
+        "https://picsum.photos/600/600?random=44"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4.5,
       "reviewsCount": 188,
@@ -809,10 +1270,21 @@
       "price": 15.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=45",
-      "images": ["https://picsum.photos/600/600?random=45"],
+      "images": [
+        "https://picsum.photos/600/600?random=45"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4.1,
       "reviewsCount": 59,
@@ -827,10 +1299,21 @@
       "price": 36.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=46",
-      "images": ["https://picsum.photos/600/600?random=46"],
+      "images": [
+        "https://picsum.photos/600/600?random=46"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4.5,
       "reviewsCount": 111,
@@ -845,10 +1328,21 @@
       "price": 41.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=47",
-      "images": ["https://picsum.photos/600/600?random=47"],
+      "images": [
+        "https://picsum.photos/600/600?random=47"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4.2,
       "reviewsCount": 72,
@@ -863,10 +1357,21 @@
       "price": 21.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=48",
-      "images": ["https://picsum.photos/600/600?random=48"],
+      "images": [
+        "https://picsum.photos/600/600?random=48"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4.4,
       "reviewsCount": 94,
@@ -881,10 +1386,21 @@
       "price": 92.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=49",
-      "images": ["https://picsum.photos/600/600?random=49"],
+      "images": [
+        "https://picsum.photos/600/600?random=49"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4.7,
       "reviewsCount": 203,
@@ -899,10 +1415,21 @@
       "price": 27.49,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=50",
-      "images": ["https://picsum.photos/600/600?random=50"],
+      "images": [
+        "https://picsum.photos/600/600?random=50"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4.3,
       "reviewsCount": 89,
@@ -917,10 +1444,21 @@
       "price": 68.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=51",
-      "images": ["https://picsum.photos/600/600?random=51"],
+      "images": [
+        "https://picsum.photos/600/600?random=51"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4.6,
       "reviewsCount": 174,
@@ -935,10 +1473,21 @@
       "price": 89.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=52",
-      "images": ["https://picsum.photos/600/600?random=52"],
+      "images": [
+        "https://picsum.photos/600/600?random=52"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4.7,
       "reviewsCount": 248,
@@ -953,10 +1502,21 @@
       "price": 7.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=53",
-      "images": ["https://picsum.photos/600/600?random=53"],
+      "images": [
+        "https://picsum.photos/600/600?random=53"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4,
       "reviewsCount": 52,
@@ -971,10 +1531,21 @@
       "price": 34.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=54",
-      "images": ["https://picsum.photos/600/600?random=54"],
+      "images": [
+        "https://picsum.photos/600/600?random=54"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4.4,
       "reviewsCount": 97,
@@ -989,10 +1560,21 @@
       "price": 17.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=55",
-      "images": ["https://picsum.photos/600/600?random=55"],
+      "images": [
+        "https://picsum.photos/600/600?random=55"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4.1,
       "reviewsCount": 45,
@@ -1007,10 +1589,21 @@
       "price": 24.49,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=56",
-      "images": ["https://picsum.photos/600/600?random=56"],
+      "images": [
+        "https://picsum.photos/600/600?random=56"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4.4,
       "reviewsCount": 88,
@@ -1025,10 +1618,21 @@
       "price": 46.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=57",
-      "images": ["https://picsum.photos/600/600?random=57"],
+      "images": [
+        "https://picsum.photos/600/600?random=57"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4.6,
       "reviewsCount": 129,
@@ -1043,10 +1647,21 @@
       "price": 10.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=58",
-      "images": ["https://picsum.photos/600/600?random=58"],
+      "images": [
+        "https://picsum.photos/600/600?random=58"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4.1,
       "reviewsCount": 36,
@@ -1061,10 +1676,21 @@
       "price": 52.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=59",
-      "images": ["https://picsum.photos/600/600?random=59"],
+      "images": [
+        "https://picsum.photos/600/600?random=59"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4.3,
       "reviewsCount": 121,
@@ -1079,10 +1705,21 @@
       "price": 56.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=60",
-      "images": ["https://picsum.photos/600/600?random=60"],
+      "images": [
+        "https://picsum.photos/600/600?random=60"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4.4,
       "reviewsCount": 83,
@@ -1097,10 +1734,21 @@
       "price": 18.99,
       "currency": "INR",
       "thumbnail": "https://picsum.photos/400/400?random=61",
-      "images": ["https://picsum.photos/600/600?random=61"],
+      "images": [
+        "https://picsum.photos/600/600?random=61"
+      ],
       "options": {
-        "colors": ["black", "white", "navy"],
-        "sizes": ["S", "M", "L", "XL"]
+        "colors": [
+          "black",
+          "white",
+          "navy"
+        ],
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
       },
       "rating": 4.2,
       "reviewsCount": 69,
@@ -1215,6 +1863,196 @@
           "qty": 1,
           "userId": 1,
           "id": 3
+        }
+      ]
+    },
+    {
+      "id": "ord_1003",
+      "userId": 3,
+      "status": "processing",
+      "amount": 65.37,
+      "createdAt": "2026-02-09T07:40:47.138Z",
+      "address": {
+        "name": "Kanak",
+        "phone": "7738808577",
+        "line1": "Sector 73",
+        "city": "Noida",
+        "postalCode": "201301",
+        "country": "IN"
+      },
+      "payment": {
+        "method": "COD"
+      },
+      "items": [
+        {
+          "productId": "p_1001",
+          "title": "Classic Tee",
+          "thumbnail": "https://picsum.photos/400/400?random=1",
+          "price": 19.99,
+          "options": {
+            "color": "white",
+            "size": "M"
+          },
+          "qty": 3,
+          "userId": 3,
+          "id": 3
+        }
+      ]
+    },
+    {
+      "id": "ord_1004",
+      "userId": 3,
+      "status": "processing",
+      "amount": 1530.08,
+      "createdAt": "2026-02-09T07:42:45.938Z",
+      "address": {
+        "name": "Kanak ",
+        "phone": "7738808577",
+        "line1": "Sector 73",
+        "city": "Noida",
+        "postalCode": "201301",
+        "country": "IN"
+      },
+      "payment": {
+        "method": "CARD"
+      },
+      "items": [
+        {
+          "productId": "p_1009",
+          "title": "Hooded Sweatshirt",
+          "thumbnail": "https://picsum.photos/400/400?random=10",
+          "price": 34.99,
+          "options": {
+            "color": "grey",
+            "size": "XL"
+          },
+          "qty": 2,
+          "userId": 3,
+          "id": 3
+        },
+        {
+          "productId": "p_1011",
+          "title": "Denim Jacket",
+          "thumbnail": "https://picsum.photos/400/400?random=12",
+          "price": 59.99,
+          "options": {
+            "color": "white",
+            "size": "L"
+          },
+          "qty": 2,
+          "userId": 3,
+          "id": 4
+        },
+        {
+          "productId": "p_1013",
+          "title": "Graphic Hoodie",
+          "thumbnail": "https://picsum.photos/400/400?random=14",
+          "price": 44.99,
+          "options": {
+            "color": "white",
+            "size": "L"
+          },
+          "qty": 4,
+          "userId": 3,
+          "id": 5
+        },
+        {
+          "productId": "p_1016",
+          "title": "Sports Watch",
+          "thumbnail": "https://picsum.photos/400/400?random=17",
+          "price": 129.99,
+          "options": {
+            "color": "white",
+            "size": "M"
+          },
+          "qty": 5,
+          "userId": 3,
+          "id": 6
+        },
+        {
+          "productId": "p_1020",
+          "title": "Gym Duffle Bag",
+          "thumbnail": "https://picsum.photos/400/400?random=21",
+          "price": 49.99,
+          "options": {
+            "color": "navy",
+            "size": "XL"
+          },
+          "qty": 6,
+          "userId": 3,
+          "id": 7
+        },
+        {
+          "productId": "p_1023",
+          "title": "Beanie Cap",
+          "thumbnail": "https://picsum.photos/400/400?random=24",
+          "price": 11.99,
+          "options": {
+            "color": "white",
+            "size": "L"
+          },
+          "qty": 7,
+          "userId": 3,
+          "id": 8
+        }
+      ]
+    },
+    {
+      "id": "ord_1005",
+      "userId": 3,
+      "status": "processing",
+      "amount": 175.4,
+      "createdAt": "2026-02-09T07:44:07.239Z",
+      "address": {
+        "name": "Kanak",
+        "phone": "7738808577",
+        "line1": "Sector 73",
+        "city": "NOida",
+        "postalCode": "201301",
+        "country": "IN"
+      },
+      "payment": {
+        "method": "COD"
+      },
+      "items": [
+        {
+          "productId": "p_1022",
+          "title": "Slip-On Sandals",
+          "thumbnail": "https://picsum.photos/400/400?random=23",
+          "price": 16.99,
+          "options": {
+            "color": "white",
+            "size": "L"
+          },
+          "qty": 1,
+          "userId": 3,
+          "id": 3
+        },
+        {
+          "productId": "p_1023",
+          "title": "Beanie Cap",
+          "thumbnail": "https://picsum.photos/400/400?random=24",
+          "price": 11.99,
+          "options": {
+            "color": "white",
+            "size": "L"
+          },
+          "qty": 3,
+          "userId": 3,
+          "id": 4
+        },
+        {
+          "productId": "p_1025",
+          "title": "Checked Casual Shirt",
+          "thumbnail": "https://picsum.photos/400/400?random=26",
+          "price": 26.99,
+          "options": {
+            "color": "white",
+            "size": "L"
+          },
+          "qty": 4,
+          "userId": 3,
+          "id": 5
         }
       ]
     }
