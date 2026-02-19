@@ -5,20 +5,43 @@ import { NavigationProp, useNavigation } from '@react-navigation/native';
 import { CartItemModel } from '../../../models/CartModel';
 import Screens from '../../Screen';
 import { useCartStore } from '../../../store/cartStore';
+import { useProductStore } from '../../../store/productStore';
 import CartItem from '../../../components/CartItem';
 import { useCallback, useEffect } from 'react';
+import Toast from 'react-native-toast-message';
 
 const CartScreen = () => {
-  const { items, subtotal, tax, total, loading, fetchCart, updateQty, removeItem } =
-    useCartStore();
-  
+  const {
+    items,
+    subtotal,
+    tax,
+    total,
+    loading,
+    fetchCart,
+    updateQty,
+    removeItem,
+  } = useCartStore();
+
   const navigation = useNavigation<NavigationProp<any>>();
 
   useEffect(() => {
     fetchCart();
   }, [fetchCart]);
 
-  const onIncrement = (item: CartItemModel) => updateQty(item.productId, item.qty + 1);
+  const { products } = useProductStore();
+
+  const onIncrement = (item: CartItemModel) => {
+    const product = products.find(p => p.id === item.productId);
+    if (product && product.stock > 0) {
+      updateQty(item.productId, item.qty + 1);
+    } else {
+      Toast.show({
+        type: 'error',
+        text1: 'Stock Unavailable',
+        text2: 'No more items available in stock',
+      });
+    }
+  };
   const onDecrement = (item: CartItemModel) => {
     if (item.qty > 1) updateQty(item.productId, item.qty - 1);
   };

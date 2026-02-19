@@ -37,3 +37,13 @@ export async function getProducts({
 export function getProductById(productId: string): Promise<ProductModel> {
   return request(`${BASE_URL}/products/${productId}`);
 }
+
+export function updateProductStock(
+  productId: string,
+  newStock: number,
+): Promise<ProductModel> {
+  return request(`${BASE_URL}/products/${productId}`, {
+    method: 'PATCH',
+    body: JSON.stringify({ stock: newStock }),
+  });
+}

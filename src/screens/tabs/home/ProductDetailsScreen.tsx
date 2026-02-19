@@ -31,6 +31,7 @@ const ProductDetailsScreen = () => {
     activeIndex,
     setActiveIndex,
     carouselRef,
+    canAddToCart,
     addToCartHandler,
   } = useProductDetails(route.params.productId, navigation);
 
@@ -61,7 +62,12 @@ const ProductDetailsScreen = () => {
         />
 
         <View style={styles.content}>
-          <Text style={styles.price}>₹{product.price}</Text>
+          <View style={styles.priceRow}>
+            <Text style={styles.price}>₹{product.price}</Text>
+            <Text style={[styles.stock, product.stock < 5 && { color: 'red' }]}>
+              {product.stock > 0 ? `${product.stock} in stock` : 'Out of Stock'}
+            </Text>
+          </View>
 
           <ProductOptions
             label="Color"
@@ -94,7 +100,11 @@ const ProductDetailsScreen = () => {
         title={product.stock === 0 ? 'Out of stock' : 'Add to cart'}
         onPress={addToCartHandler}
         variant="solid"
-        style={styles.addButton}
+        style={{
+          ...styles.addButton,
+          opacity: canAddToCart ? 1 : 0.5,
+        }}
+        disabled={!canAddToCart}
       />
     </View>
   );

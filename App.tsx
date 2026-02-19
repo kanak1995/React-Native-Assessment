@@ -6,6 +6,7 @@ import {
   createBottomTabNavigator,
   BottomTabNavigationOptions,
 } from '@react-navigation/bottom-tabs';
+import Toast from 'react-native-toast-message';
 
 import Screens from './src/screens/Screen';
 import LoginScreen from './src/screens/onboarding/LoginScreen';
@@ -115,6 +116,7 @@ export default function App() {
           component={OrderDetailsScreen}
         />
       </Stack.Navigator>
+      <Toast />
     </NavigationContainer>
   );
 }

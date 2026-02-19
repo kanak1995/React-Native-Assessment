@@ -3,6 +3,7 @@ import { Alert } from 'react-native';
 import { placeOrder } from '../api/checkout.api';
 import { NavigationProp, useNavigation } from '@react-navigation/native';
 import Screens from '../screens/Screen';
+import { useCartStore } from '../store/cartStore';
 
 type PaymentMethod = 'COD' | 'CARD';
 
@@ -60,6 +61,9 @@ export function useCheckout() {
           method: paymentMethod,
         },
       });
+
+      const clear = useCartStore.getState().clear;
+      await clear();
 
       navigation.navigate(Screens.OrderSuccessScreen, {
         orderId: res.orderId,

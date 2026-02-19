@@ -59,9 +59,19 @@ export const styles = StyleSheet.create({
     color: colors.backgroundDarkGreenDark,
   },
   price: {
-    marginTop: 4,
     fontFamily: FontFamily.poppins.semiBold,
     color: colors.mainGreen,
+  },
+  priceRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginTop: 4,
+  },
+  outOfStock: {
+    fontFamily: FontFamily.poppins.medium,
+    color: 'red',
+    fontSize: 10,
   },
   emptyText: {
     textAlign: 'center',

@@ -55,7 +55,7 @@
       "reviewsCount": 87,
       "category": "apparel",
       "brand": "Acme",
-      "stock": 42
+      "stock": 3
     },
     {
       "id": "p_1002",
@@ -84,7 +84,7 @@
       "reviewsCount": 132,
       "category": "apparel",
       "brand": "Acme",
-      "stock": 35
+      "stock": 36
     },
     {
       "id": "p_1003",
@@ -1771,34 +1771,7 @@
       "name": "Accessories"
     }
   ],
-  "cart": [
-    {
-      "productId": "p_1001",
-      "title": "Classic Tee",
-      "thumbnail": "https://picsum.photos/400/400?random=1",
-      "price": 19.99,
-      "options": {
-        "color": "navy",
-        "size": "XL"
-      },
-      "qty": 3,
-      "userId": 2,
-      "id": 1
-    },
-    {
-      "productId": "p_1002",
-      "title": "Premium Polo Shirt",
-      "thumbnail": "https://picsum.photos/400/400?random=61",
-      "price": 29.99,
-      "options": {
-        "color": "navy",
-        "size": "XL"
-      },
-      "qty": 1,
-      "userId": 2,
-      "id": 2
-    }
-  ],
+  "cart": [],
   "orders": [
     {
       "id": "ord_1001",

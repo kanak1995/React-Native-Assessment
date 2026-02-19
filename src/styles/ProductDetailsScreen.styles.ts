@@ -40,6 +40,11 @@ export const styles = StyleSheet.create({
   rating: {
     color: colors.lightGreen,
   },
+  stock: {
+    fontFamily: FontFamily.poppins.medium,
+    color: colors.mainGreen,
+    fontSize: 14,
+  },
   optionGroup: {
     marginBottom: 12,
   },
