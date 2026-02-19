@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Alert, FlatList } from 'react-native';
 import { getProductById } from '../api/product.api';
-import { addToCart } from '../api/cart.api';
+import { useCartStore } from '../store/cartStore';
 import { ProductModel } from '../models/ProductModel';
 
 const AUTO_SCROLL_INTERVAL = 3000;
@@ -76,7 +76,9 @@ export const useProductDetails = (productId: string, navigation: any) => {
       return;
     }
 
-    await addToCart(
+    const addItem = useCartStore.getState().addItem;
+
+    await addItem(
       {
         productId: product.id,
         title: product.title,

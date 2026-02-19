@@ -7,7 +7,7 @@ import {
   useFocusEffect,
   useNavigation,
 } from '@react-navigation/native';
-import { clearToken } from '../utils/storage';
+import { useAuthStore } from '../store/authStore';
 import Screens from '../screens/Screen';
 
 export function useOrders() {
@@ -31,15 +31,10 @@ export function useOrders() {
     }
   }, []);
 
-  const logoutHandle = async () => {
-    await clearToken();
+  const { logout } = useAuthStore();
 
-    navigation.dispatch(
-      CommonActions.reset({
-        index: 0,
-        routes: [{ name: Screens.LoginScreen }],
-      }),
-    );
+  const logoutHandle = async () => {
+    await logout();
   };
 
   useFocusEffect(

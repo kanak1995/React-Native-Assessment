@@ -21,7 +21,7 @@ import OrderDetailsScreen from './src/screens/tabs/order/OrderDetailsScreen';
 import { colors } from './src/theme/colors';
 import { FontFamily } from './src/theme/fonts';
 import TabIcon from './src/components/TabIcon';
-import { getToken } from './src/utils/storage';
+import { useAuthStore } from './src/store/authStore';
 
 /* ------------------ TYPES ------------------ */
 export type RootStackParamList = {
@@ -41,19 +41,13 @@ const Tab = createBottomTabNavigator();
 export default function App() {
   const isDarkMode = useColorScheme() === 'dark';
 
-  const [authState, setAuthState] = useState<
-    'loading' | 'authenticated' | 'unauthenticated'
-  >('loading');
+  const { status, initialize } = useAuthStore();
 
   useEffect(() => {
-    const checkAuth = async () => {
-      const token = await getToken();
-      setAuthState(token ? 'authenticated' : 'unauthenticated');
-    };
-    checkAuth();
-  }, []);
+    initialize();
+  }, [initialize]);
 
-  if (authState === 'loading') {
+  if (status === 'loading') {
     return null; // Splash screen here
   }
 
@@ -63,7 +57,7 @@ export default function App() {
       <Stack.Navigator
         screenOptions={{ headerShown: false }}
         initialRouteName={
-          authState === 'authenticated' ? Screens.MainTabs : Screens.LoginScreen
+          status === 'authenticated' ? Screens.MainTabs : Screens.LoginScreen
         }
       >
         <Stack.Screen

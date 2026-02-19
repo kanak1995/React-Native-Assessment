@@ -4,14 +4,14 @@
       "name": "Sonu",
       "email": "sonu@gmail.com",
       "password": "Sonu@123",
-      "token": "3xkueip4rwcmldi6qmo",
+      "token": "1czqojc4b2xmltd61z8",
       "id": 1
     },
     {
       "name": "Kanak",
       "email": "kanak@gmail.com",
       "password": "Kanak@123",
-      "token": "nu3fd6ko3immldj4f7g",
+      "token": "7994b065w14mltd8b46",
       "id": 2
     },
     {
@@ -1773,13 +1773,26 @@
   ],
   "cart": [
     {
-      "productId": "p_1004",
-      "title": "Running Sneakers",
-      "thumbnail": "https://picsum.photos/400/400?random=5",
-      "price": 79.99,
+      "productId": "p_1001",
+      "title": "Classic Tee",
+      "thumbnail": "https://picsum.photos/400/400?random=1",
+      "price": 19.99,
       "options": {
-        "color": "white",
-        "size": "9"
+        "color": "navy",
+        "size": "XL"
+      },
+      "qty": 3,
+      "userId": 2,
+      "id": 1
+    },
+    {
+      "productId": "p_1002",
+      "title": "Premium Polo Shirt",
+      "thumbnail": "https://picsum.photos/400/400?random=61",
+      "price": 29.99,
+      "options": {
+        "color": "navy",
+        "size": "XL"
       },
       "qty": 1,
       "userId": 2,

@@ -3,6 +3,9 @@ import { View, Text, FlatList, Image, ScrollView } from 'react-native';
 import { RouteProp, useRoute } from '@react-navigation/native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useOrderDetails } from '../../../hooks/useOrderDetails';
+import { useCartStore } from '../../../store/cartStore';
+import { useEffect } from 'react';
+import { debugLog } from '../../../../logger';
 
 type RouteParams = {
   OrderDetailsScreen: {
@@ -14,6 +17,13 @@ const OrderDetailsScreen = () => {
   const route = useRoute<RouteProp<RouteParams, 'OrderDetailsScreen'>>();
   const { top } = useSafeAreaInsets();
   const { order, loading } = useOrderDetails(route.params.orderId);
+
+  const { fetchCart } = useCartStore();
+
+  useEffect(() => {
+    fetchCart();
+    debugLog(fetchCart);
+  }, [fetchCart]);
 
   if (!order && loading) {
     return <Text style={styles.loading}>Loading...</Text>;
