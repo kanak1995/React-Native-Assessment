@@ -1,26 +1,34 @@
-
 import React from 'react';
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
 import LoginScreen from '../src/screens/onboarding/LoginScreen';
-import { loginApi } from '../src/api/auth.api';
+import { useAuthStore } from '../src/store/authStore';
 
 // Mock the dependencies
+const mockNavigate = jest.fn();
 jest.mock('@react-navigation/native', () => {
   return {
     useNavigation: () => ({
-      navigate: jest.fn(),
+      navigate: mockNavigate,
     }),
     useFocusEffect: jest.fn(),
   };
 });
 
-jest.mock('../src/api/auth.api');
-jest.mock('../src/utils/storage');
+jest.mock('../src/store/authStore');
 
 describe('LoginScreen', () => {
+  const mockLogin = jest.fn();
+
+  beforeEach(() => {
+    jest.clearAllMocks();
+    (useAuthStore as unknown as jest.Mock).mockReturnValue({
+      login: mockLogin,
+    });
+  });
+
   it('renders correctly', () => {
     const { getByText, getByPlaceholderText } = render(<LoginScreen />);
-    
+
     expect(getByText('Welcome')).toBeTruthy();
     expect(getByPlaceholderText('example@example.com')).toBeTruthy();
     expect(getByPlaceholderText('Enter your password')).toBeTruthy();
@@ -28,12 +36,18 @@ describe('LoginScreen', () => {
   });
 
   it('shows error on failed login', async () => {
-    (loginApi as jest.Mock).mockRejectedValue(new Error('Invalid credentials'));
+    mockLogin.mockRejectedValue(new Error('Invalid credentials'));
 
     const { getByText, getByPlaceholderText } = render(<LoginScreen />);
 
-    fireEvent.changeText(getByPlaceholderText('example@example.com'), 'test@test.com');
-    fireEvent.changeText(getByPlaceholderText('Enter your password'), 'password');
+    fireEvent.changeText(
+      getByPlaceholderText('example@example.com'),
+      'test@test.com',
+    );
+    fireEvent.changeText(
+      getByPlaceholderText('Enter your password'),
+      'password',
+    );
     fireEvent.press(getByText('Log In'));
 
     await waitFor(() => {
@@ -42,20 +56,22 @@ describe('LoginScreen', () => {
   });
 
   it('navigates on successful login', async () => {
-     (loginApi as jest.Mock).mockResolvedValue({
-      token: 'fake-token',
-      user: { id: 1, name: 'Test User', email: 'test@test.com' },
-    });
+    mockLogin.mockResolvedValueOnce(undefined);
 
     const { getByText, getByPlaceholderText } = render(<LoginScreen />);
 
-    fireEvent.changeText(getByPlaceholderText('example@example.com'), 'test@test.com');
-    fireEvent.changeText(getByPlaceholderText('Enter your password'), 'password');
+    fireEvent.changeText(
+      getByPlaceholderText('example@example.com'),
+      'test@test.com',
+    );
+    fireEvent.changeText(
+      getByPlaceholderText('Enter your password'),
+      'password',
+    );
     fireEvent.press(getByText('Log In'));
 
     await waitFor(() => {
-       // Check if navigation was called - mocked above, but we rely on no error being shown as a proxy for success flow initiation in this simple test context without mocking the navigation prop fully.
-       // In a real scenario we'd expect(mockNavigate).toHaveBeenCalledWith(...)
+      expect(mockNavigate).toHaveBeenCalledWith('MainTabs');
     });
   });
 });

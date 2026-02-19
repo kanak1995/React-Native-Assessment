@@ -55,7 +55,7 @@
       "reviewsCount": 87,
       "category": "apparel",
       "brand": "Acme",
-      "stock": 3
+      "stock": 0
     },
     {
       "id": "p_1002",
@@ -1771,7 +1771,21 @@
       "name": "Accessories"
     }
   ],
-  "cart": [],
+  "cart": [
+    {
+      "productId": "p_1001",
+      "title": "Classic Tee",
+      "thumbnail": "https://picsum.photos/400/400?random=1",
+      "price": 19.99,
+      "options": {
+        "color": "white",
+        "size": "L"
+      },
+      "qty": 2,
+      "userId": 2,
+      "id": 1
+    }
+  ],
   "orders": [
     {
       "id": "ord_1001",
@@ -2039,6 +2053,138 @@
           "qty": 4,
           "userId": 3,
           "id": 5
+        }
+      ]
+    },
+    {
+      "id": "ord_1006",
+      "userId": 2,
+      "status": "processing",
+      "amount": 65.37,
+      "createdAt": "2026-02-19T12:53:30.601Z",
+      "address": {
+        "name": "Kanak",
+        "phone": "7738808577",
+        "line1": "Safasdfjk",
+        "city": "Sdfjhashdf",
+        "postalCode": "34342",
+        "country": "IN"
+      },
+      "payment": {
+        "method": "COD"
+      },
+      "items": [
+        {
+          "productId": "p_1001",
+          "title": "Classic Tee",
+          "thumbnail": "https://picsum.photos/400/400?random=1",
+          "price": 19.99,
+          "options": {
+            "color": "white",
+            "size": "L"
+          },
+          "qty": 3,
+          "userId": 2,
+          "id": 1
+        }
+      ]
+    },
+    {
+      "id": "ord_1007",
+      "userId": 2,
+      "status": "processing",
+      "amount": 65.37,
+      "createdAt": "2026-02-19T12:54:09.770Z",
+      "address": {
+        "name": "Jaskgdfjalkh",
+        "phone": "7775544444",
+        "line1": "Sdajfhksalf",
+        "city": "Wjelfgqerlkfh",
+        "postalCode": "324343",
+        "country": "IN"
+      },
+      "payment": {
+        "method": "COD"
+      },
+      "items": [
+        {
+          "productId": "p_1001",
+          "title": "Classic Tee",
+          "thumbnail": "https://picsum.photos/400/400?random=1",
+          "price": 19.99,
+          "options": {
+            "color": "white",
+            "size": "L"
+          },
+          "qty": 3,
+          "userId": 2,
+          "id": 1
+        }
+      ]
+    },
+    {
+      "id": "ord_1008",
+      "userId": 2,
+      "status": "processing",
+      "amount": 65.37,
+      "createdAt": "2026-02-19T12:55:00.089Z",
+      "address": {
+        "name": "Sssdfjk",
+        "phone": "357309453425",
+        "line1": "Ewrfsadf",
+        "city": "Efsdsdf",
+        "postalCode": "234234",
+        "country": "IN"
+      },
+      "payment": {
+        "method": "COD"
+      },
+      "items": [
+        {
+          "productId": "p_1001",
+          "title": "Classic Tee",
+          "thumbnail": "https://picsum.photos/400/400?random=1",
+          "price": 19.99,
+          "options": {
+            "color": "white",
+            "size": "L"
+          },
+          "qty": 3,
+          "userId": 2,
+          "id": 1
+        }
+      ]
+    },
+    {
+      "id": "ord_1009",
+      "userId": 2,
+      "status": "processing",
+      "amount": 65.37,
+      "createdAt": "2026-02-19T13:01:15.299Z",
+      "address": {
+        "name": "Hakk F",
+        "phone": "456873645834",
+        "line1": "Ejkgqsjkadgfkj",
+        "city": "GfleqkhW",
+        "postalCode": "34224",
+        "country": "IN"
+      },
+      "payment": {
+        "method": "COD"
+      },
+      "items": [
+        {
+          "productId": "p_1001",
+          "title": "Classic Tee",
+          "thumbnail": "https://picsum.photos/400/400?random=1",
+          "price": 19.99,
+          "options": {
+            "color": "black",
+            "size": "M"
+          },
+          "qty": 3,
+          "userId": 2,
+          "id": 1
         }
       ]
     }

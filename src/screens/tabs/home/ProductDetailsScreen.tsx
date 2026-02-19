@@ -90,7 +90,14 @@ const ProductDetailsScreen = () => {
             {product.description}
           </Text>
 
-          <Text style={styles.readMore} onPress={() => setExpanded(!expanded)}>
+          <Text
+            style={styles.readMore}
+            onPress={() => setExpanded(!expanded)}
+            accessibilityLabel={
+              expanded ? 'Show less description' : 'Read more description'
+            }
+            accessibilityRole="button"
+          >
             {expanded ? 'Show less' : 'Read more'}
           </Text>
         </View>
@@ -105,6 +112,9 @@ const ProductDetailsScreen = () => {
           opacity: canAddToCart ? 1 : 0.5,
         }}
         disabled={!canAddToCart}
+        accessibilityLabel={
+          product.stock === 0 ? 'Product out of stock' : 'Add to cart'
+        }
       />
     </View>
   );

@@ -44,35 +44,44 @@ export function useCheckout() {
     return true;
   };
 
-  const onPlaceOrder = async () => {
+  const onPlaceOrder = () => {
     if (!validate()) return;
 
-    try {
-      const res = await placeOrder({
-        address: {
-          name: form.name,
-          phone: form.phone,
-          line1: form.line1,
-          city: form.city,
-          postalCode: form.postalCode,
-          country: 'IN',
-        },
-        payment: {
-          method: paymentMethod,
-        },
-      });
+    Alert.alert('Confirm Order', 'Are you sure you want to place this order?', [
+      { text: 'Cancel', style: 'cancel' },
+      {
+        text: 'Place Order',
+        onPress: async () => {
+          try {
+            const res = await placeOrder({
+              address: {
+                name: form.name,
+                phone: form.phone,
+                line1: form.line1,
+                city: form.city,
+                postalCode: form.postalCode,
+                country: 'IN',
+              },
+              payment: {
+                method: paymentMethod,
+              },
+            });
 
-      const clear = useCartStore.getState().clear;
-      await clear();
+            const clearAfterCheckout =
+              useCartStore.getState().clearAfterCheckout;
+            await clearAfterCheckout();
 
-      navigation.navigate(Screens.OrderSuccessScreen, {
-        orderId: res.orderId,
-        amount: res.amount,
-      });
-    } catch (err) {
-      Alert.alert('Order Failed', 'Please try again');
-      console.error(err);
-    }
+            navigation.navigate(Screens.OrderSuccessScreen, {
+              orderId: res.orderId,
+              amount: res.amount,
+            });
+          } catch (err) {
+            Alert.alert('Order Failed', 'Please try again');
+            console.error(err);
+          }
+        },
+      },
+    ]);
   };
 
   return {

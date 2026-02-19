@@ -23,6 +23,7 @@ interface CartState {
   updateQty: (productId: string, qty: number) => Promise<void>;
   removeItem: (productId: string) => Promise<void>;
   clear: () => Promise<void>;
+  clearAfterCheckout: () => Promise<void>;
 }
 
 export const useCartStore = create<CartState>((set, get) => ({
@@ -119,7 +120,16 @@ export const useCartStore = create<CartState>((set, get) => ({
       await updateProductStock(item.productId, product.stock + item.qty);
       useProductStore.getState().updateLocalStock(item.productId, item.qty);
     }
+    await clearCart();
+    set({
+      items: [],
+      subtotal: 0,
+      tax: 0,
+      total: 0,
+    });
+  },
 
+  clearAfterCheckout: async () => {
     await clearCart();
     set({
       items: [],

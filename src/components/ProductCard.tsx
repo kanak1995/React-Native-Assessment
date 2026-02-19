@@ -14,6 +14,8 @@ const ProductCard = ({ item, onPress }: Props) => {
       style={styles.card}
       activeOpacity={0.95}
       onPress={onPress}
+      accessibilityLabel={`Product: ${item.title}`}
+      accessibilityRole="button"
     >
       <Image source={{ uri: item.thumbnail }} style={styles.image} />
       <Text style={styles.title}>{item.title}</Text>

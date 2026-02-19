@@ -14,6 +14,8 @@ const OrderItem = ({ order, onPress }: Props) => {
       style={styles.card}
       activeOpacity={0.95}
       onPress={onPress}
+      accessibilityLabel={`Order ${order.id}`}
+      accessibilityRole="button"
     >
       <View style={styles.row}>
         <Text style={styles.orderId}>#{order.id}</Text>
