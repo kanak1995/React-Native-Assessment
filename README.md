@@ -26,6 +26,7 @@ It uses a **mock backend (JSON Server)** with **token‑based authentication**, 
 - Search with debounce (≤ 400ms)
 - Category filter
 - Empty state handling
+- **Wishlist Support** (Add/Remove from wishlist)
 
 ---
 
@@ -85,7 +86,7 @@ It uses a **mock backend (JSON Server)** with **token‑based authentication**, 
 | Language   | TypeScript                      |
 | Framework  | React Native CLI                |
 | Navigation | React Navigation (Stack + Tabs) |
-| State      | Custom Hooks                    |
+| State      | Zustand                         |
 | Backend    | JSON Server                     |
 | Storage    | AsyncStorage                    |
 | API        | Fetch wrapper (`request()`)     |
@@ -117,6 +118,7 @@ src/
 │   ├── BottomSheet.tsx
 │   ├── CartItem.tsx
 │   ├── CategoryPicker.tsx
+│   ├── FilterModal.tsx
 │   ├── ImageCarousel.tsx
 │   ├── OrderItem.tsx
 │   ├── Pagination.tsx
@@ -129,9 +131,7 @@ src/
 │   └── constants.ts
 │
 ├── hooks/
-│   ├── useCart.ts
 │   ├── useCheckout.ts
-│   ├── useHomeProducts.ts
 │   ├── useOrderDetails.ts
 │   ├── useOrders.ts
 │   └── useProductDetails.ts
@@ -139,7 +139,8 @@ src/
 ├── models/
 │   ├── CartModel.ts
 │   ├── OrderModel.ts
-│   └── ProductModel.ts
+│   ├── ProductModel.ts
+│   └── WishlistModel.ts
 │
 ├── screens/
 │   ├── onboarding/
@@ -156,9 +157,17 @@ src/
 │       │   ├── CartScreen.tsx
 │       │   ├── CheckoutScreen.tsx
 │       │   └── OrderSuccessScreen.tsx
+│       ├── wishlist/
+│       │   └── WishlistScreen.tsx
 │       └── order/
 │           ├── OrdersScreen.tsx
 │           └── OrderDetailsScreen.tsx
+│
+├── store/
+│   ├── authStore.ts
+│   ├── cartStore.ts
+│   ├── productStore.ts
+│   └── wishlistStore.ts
 │
 ├── styles/
 │   ├── CartScreen.styles.ts
@@ -324,11 +333,7 @@ npm test
 
 ## 🚀 Future Improvements
 
-- Wishlist
-- Price sorting
 - Dark mode
-- API pagination metadata
-- Real backend integration
 
 ---
 
@@ -340,6 +345,7 @@ npm test
 ✔ Cart  
 ✔ Checkout  
 ✔ Orders  
+✔ Wishlist  
 ✔ Token Handling  
 ✔ User‑scoped Data  
 ✔ Navigation Reset on Logout
