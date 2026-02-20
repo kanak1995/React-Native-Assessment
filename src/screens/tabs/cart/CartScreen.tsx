@@ -30,35 +30,44 @@ const CartScreen = () => {
 
   const { products } = useProductStore();
 
-  const onIncrement = (item: CartItemModel) => {
-    const product = products.find(p => p.id === item.productId);
-    if (product && product.stock > 0) {
-      updateQty(item.productId, item.qty + 1);
-    } else {
-      Toast.show({
-        type: 'error',
-        text1: 'Stock Unavailable',
-        text2: 'No more items available in stock',
-      });
-    }
-  };
-  const onDecrement = (item: CartItemModel) => {
-    if (item.qty > 1) updateQty(item.productId, item.qty - 1);
-  };
-  const onRemove = (productId: string) => {
-    Alert.alert(
-      'Remove item',
-      'Are you sure you want to remove this item from cart?',
-      [
-        { text: 'Cancel', style: 'cancel' },
-        {
-          text: 'Remove',
-          style: 'destructive',
-          onPress: () => removeItem(productId),
-        },
-      ],
-    );
-  };
+  const onIncrement = useCallback(
+    (item: CartItemModel) => {
+      const product = products.find(p => p.id === item.productId);
+      if (product && product.stock > 0) {
+        updateQty(item.productId, item.qty + 1);
+      } else {
+        Toast.show({
+          type: 'error',
+          text1: 'Stock Unavailable',
+          text2: 'No more items available in stock',
+        });
+      }
+    },
+    [products, updateQty],
+  );
+  const onDecrement = useCallback(
+    (item: CartItemModel) => {
+      if (item.qty > 1) updateQty(item.productId, item.qty - 1);
+    },
+    [updateQty],
+  );
+  const onRemove = useCallback(
+    (productId: string) => {
+      Alert.alert(
+        'Remove item',
+        'Are you sure you want to remove this item from cart?',
+        [
+          { text: 'Cancel', style: 'cancel' },
+          {
+            text: 'Remove',
+            style: 'destructive',
+            onPress: () => removeItem(productId),
+          },
+        ],
+      );
+    },
+    [removeItem],
+  );
 
   const checkoutHandle = () => {
     navigation.navigate(Screens.CheckoutScreen);

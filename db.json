@@ -48,7 +48,7 @@
       "reviewsCount": 87,
       "category": "apparel",
       "brand": "Acme",
-      "stock": 1
+      "stock": 0
     },
     {
       "id": "p_1002",
@@ -77,7 +77,7 @@
       "reviewsCount": 132,
       "category": "apparel",
       "brand": "Acme",
-      "stock": 34
+      "stock": 33
     },
     {
       "id": "p_1003",
@@ -106,7 +106,7 @@
       "reviewsCount": 96,
       "category": "apparel",
       "brand": "DenimCo",
-      "stock": 25
+      "stock": 24
     },
     {
       "id": "p_1004",
@@ -1764,47 +1764,7 @@
       "name": "Accessories"
     }
   ],
-  "cart": [
-    {
-      "productId": "p_1001",
-      "title": "Classic Tee",
-      "thumbnail": "https://picsum.photos/400/400?random=1",
-      "price": 19.99,
-      "options": {
-        "color": "black",
-        "size": "M"
-      },
-      "qty": 1,
-      "userId": 2,
-      "id": 1
-    },
-    {
-      "productId": "p_1002",
-      "title": "Premium Polo Shirt",
-      "thumbnail": "https://picsum.photos/400/400?random=61",
-      "price": 29.99,
-      "options": {
-        "color": "white",
-        "size": "M"
-      },
-      "qty": 1,
-      "userId": 2,
-      "id": 2
-    },
-    {
-      "productId": "p_1003",
-      "title": "Slim Fit Jeans",
-      "thumbnail": "https://picsum.photos/400/400?random=4",
-      "price": 49.99,
-      "options": {
-        "color": "navy",
-        "size": "34"
-      },
-      "qty": 1,
-      "userId": 2,
-      "id": 3
-    }
-  ],
+  "cart": [],
   "orders": [
     {
       "id": "ord_1001",
@@ -1928,6 +1888,65 @@
           "qty": 1,
           "userId": 2,
           "id": 1
+        }
+      ]
+    },
+    {
+      "id": "ord_1004",
+      "userId": 2,
+      "status": "processing",
+      "amount": 217.93,
+      "createdAt": "2026-02-20T11:15:44.268Z",
+      "address": {
+        "name": "Kanak ",
+        "phone": "7738808577",
+        "line1": "Gurgoan ",
+        "city": "Haryana ",
+        "postalCode": "32212132",
+        "country": "IN"
+      },
+      "payment": {
+        "method": "COD"
+      },
+      "items": [
+        {
+          "productId": "p_1001",
+          "title": "Classic Tee",
+          "thumbnail": "https://picsum.photos/400/400?random=1",
+          "price": 19.99,
+          "options": {
+            "color": "black",
+            "size": "M"
+          },
+          "qty": 2,
+          "userId": 2,
+          "id": 1
+        },
+        {
+          "productId": "p_1002",
+          "title": "Premium Polo Shirt",
+          "thumbnail": "https://picsum.photos/400/400?random=61",
+          "price": 29.99,
+          "options": {
+            "color": "white",
+            "size": "M"
+          },
+          "qty": 2,
+          "userId": 2,
+          "id": 2
+        },
+        {
+          "productId": "p_1003",
+          "title": "Slim Fit Jeans",
+          "thumbnail": "https://picsum.photos/400/400?random=4",
+          "price": 49.99,
+          "options": {
+            "color": "navy",
+            "size": "34"
+          },
+          "qty": 2,
+          "userId": 2,
+          "id": 3
         }
       ]
     }

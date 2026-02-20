@@ -1,4 +1,4 @@
-import { View, Text, FlatList, TouchableOpacity } from 'react-native';
+import { View, Text, FlatList } from 'react-native';
 import { NavigationProp, useNavigation } from '@react-navigation/native';
 import { styles } from '../../../styles/OrdersScreen.styles';
 import Screens from '../../Screen';
@@ -6,17 +6,16 @@ import OrderItem from '../../../components/OrderItem';
 import { useOrders } from '../../../hooks/useOrders';
 
 const OrdersScreen = () => {
-  const { orders, loading, refreshing, onRefresh, onLoadMore, logoutHandle } =
-    useOrders();
+  const { orders, loading, refreshing, onRefresh, onLoadMore } = useOrders();
   const navigation = useNavigation<NavigationProp<any>>();
 
   return (
     <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.orderHistory}>Order History</Text>
-        <TouchableOpacity activeOpacity={0.7} onPress={logoutHandle}>
+        {/* <TouchableOpacity activeOpacity={0.7} onPress={logoutHandle}>
           <Text style={styles.logoutText}>Logout</Text>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
       </View>
       <FlatList
         data={orders}
