@@ -99,4 +99,7 @@ export const styles = StyleSheet.create({
     width: 10,
     height: 10,
   },
+  heartIcon: {
+    marginLeft: 10,
+  },
 });

@@ -11,6 +11,7 @@ type RouteName = {
   CheckoutScreen: 'CheckoutScreen';
   OrderSuccessScreen: 'OrderSuccessScreen';
   OrderDetailsScreen: 'OrderDetailsScreen';
+  WishlistScreen: 'WishlistScreen';
 };
 
 const Screens: RouteName = {
@@ -26,6 +27,7 @@ const Screens: RouteName = {
   CheckoutScreen: 'CheckoutScreen',
   OrderSuccessScreen: 'OrderSuccessScreen',
   OrderDetailsScreen: 'OrderDetailsScreen',
+  WishlistScreen: 'WishlistScreen',
 };
 
 export default Screens;

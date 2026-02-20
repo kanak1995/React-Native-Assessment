@@ -1,5 +1,11 @@
 import React from 'react';
-import { View, ScrollView, ActivityIndicator, Text } from 'react-native';
+import {
+  View,
+  ScrollView,
+  ActivityIndicator,
+  Text,
+  TouchableOpacity,
+} from 'react-native';
 import { useNavigation, useRoute, RouteProp } from '@react-navigation/native';
 import { styles } from '../../../styles/ProductDetailsScreen.styles';
 import { colors } from '../../../theme/colors';
@@ -8,7 +14,8 @@ import { useProductDetails } from '../../../hooks/useProductDetails';
 import ImageCarousel from '../../../components/ImageCarousel';
 import ProductOptions from '../../../components/ProductOptions';
 import Button from '../../../components/Button';
-// import AddToCartButton from '../../../components/AddToCartButton';
+import { useWishlistStore } from '../../../store/wishlistStore';
+import Icon from '../../../components/Icon';
 
 type RouteParams = {
   ProductDetails: { productId: string };
@@ -35,6 +42,8 @@ const ProductDetailsScreen = () => {
     addToCartHandler,
   } = useProductDetails(route.params.productId, navigation);
 
+  const { toggleWishlist, isInWishlist } = useWishlistStore();
+
   if (loading) {
     return (
       <View style={styles.center}>
@@ -51,6 +60,8 @@ const ProductDetailsScreen = () => {
     );
   }
 
+  const isFavorite = product ? isInWishlist(product.id) : false;
+
   return (
     <View style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollview}>
@@ -63,7 +74,20 @@ const ProductDetailsScreen = () => {
 
         <View style={styles.content}>
           <View style={styles.priceRow}>
-            <Text style={styles.price}>₹{product.price}</Text>
+            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+              <Text style={styles.price}>₹{product.price}</Text>
+
+              <TouchableOpacity
+                onPress={() => toggleWishlist(product.id)}
+                style={styles.heartIcon}
+              >
+                <Icon
+                  name={isFavorite ? 'fillHeart' : 'heart'}
+                  size={26}
+                  color={isFavorite ? 'red' : colors.mainGreen}
+                />
+              </TouchableOpacity>
+            </View>
             <Text style={[styles.stock, product.stock < 5 && { color: 'red' }]}>
               {product.stock > 0 ? `${product.stock} in stock` : 'Out of Stock'}
             </Text>

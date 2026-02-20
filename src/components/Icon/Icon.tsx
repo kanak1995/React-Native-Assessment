@@ -9,6 +9,8 @@ import Calendar from '../../../assets/icons/calendar.svg';
 import Home from '../../../assets/icons/home.svg';
 import Cart from '../../../assets/icons/cart.svg';
 import Order from '../../../assets/icons/order.svg';
+import heart from '../../../assets/icons/heart.svg';
+import fillHeart from '../../../assets/icons/fill-heart.svg';
 
 export type IconName =
   | 'onboardfirst'
@@ -19,7 +21,9 @@ export type IconName =
   | 'calendar'
   | 'home'
   | 'cart'
-  | 'order';
+  | 'order'
+  | 'heart'
+  | 'fillHeart';
 
 interface IconProps {
   name: IconName;
@@ -40,7 +44,8 @@ const ICON_MAP: Record<IconName, React.FC<any>> = {
   home: Home,
   cart: Cart,
   order: Order,
-  // signup: Signup,
+  heart: heart,
+  fillHeart: fillHeart,
 };
 
 const Icon: React.FC<IconProps> = ({
@@ -48,7 +53,7 @@ const Icon: React.FC<IconProps> = ({
   size = 24,
   width,
   height,
-  color = '#0000',
+  color = '#052224',
   style,
 }) => {
   const SvgIcon = ICON_MAP[name];
@@ -66,6 +71,7 @@ const Icon: React.FC<IconProps> = ({
       width={finalWidth}
       height={finalHeight}
       fill={color}
+      stroke={color}
       style={style}
     />
   );

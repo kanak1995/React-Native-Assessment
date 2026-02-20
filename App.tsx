@@ -18,6 +18,7 @@ import ProductDetailsScreen from './src/screens/tabs/home/ProductDetailsScreen';
 import CheckoutScreen from './src/screens/tabs/cart/CheckoutScreen';
 import OrderSuccessScreen from './src/screens/tabs/cart/OrderSuccessScreen';
 import OrderDetailsScreen from './src/screens/tabs/order/OrderDetailsScreen';
+import WishlistScreen from './src/screens/tabs/wishlist/WishlistScreen';
 
 import { colors } from './src/theme/colors';
 import { FontFamily } from './src/theme/fonts';
@@ -135,6 +136,11 @@ const TabNavigator = React.memo(() => (
       options={{ title: 'Cart', tabBarIcon: renderCartIcon }}
     />
     <Tab.Screen
+      name={Screens.WishlistScreen}
+      component={WishlistScreen}
+      options={{ title: 'Wishlist', tabBarIcon: renderWishlistIcon }}
+    />
+    <Tab.Screen
       name={Screens.OrdersScreen}
       component={OrdersScreen}
       options={{
@@ -193,5 +199,13 @@ const renderOrderIcon = ({ focused }: { focused: boolean }) => (
     focused={focused}
     activeIcon={require('./assets/tabs/order/order.png')}
     inactiveIcon={require('./assets/tabs/order/order.png')}
+  />
+);
+
+const renderWishlistIcon = ({ focused }: { focused: boolean }) => (
+  <TabIcon
+    focused={focused}
+    activeIcon={require('./assets/tabs/wishlist/wishlist.png')} // Reusing home icon for now or heart if available
+    inactiveIcon={require('./assets/tabs/wishlist/wishlist.png')}
   />
 );

@@ -37,6 +37,7 @@ export const styles = StyleSheet.create({
   },
   contentContainerStyle: {
     padding: 16,
+    paddingBottom: 110,
   },
   row: {
     flexDirection: 'row',
