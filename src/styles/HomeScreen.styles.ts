@@ -8,15 +8,20 @@ export const styles = StyleSheet.create({
     backgroundColor: colors.backgroundDarkGreenDark,
   },
 
+  searchContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginTop: 60,
+    marginHorizontal: 16,
+    marginBottom: 12,
+  },
   searchBar: {
     borderRadius: 14,
     backgroundColor: colors.lightGreen,
     height: 45,
-    marginTop: 60,
-    marginHorizontal: 16,
     justifyContent: 'space-between',
-    marginBottom: 12,
     flexDirection: 'row',
+    flex: 1,
   },
   searchInput: {
     fontFamily: FontFamily.poppins.regular,
@@ -34,6 +39,19 @@ export const styles = StyleSheet.create({
   categoryText: {
     fontFamily: FontFamily.poppins.medium,
     color: colors.backgroundDarkGreenDark,
+  },
+  filterButton: {
+    height: 45,
+    marginLeft: 8,
+    paddingHorizontal: 12,
+    borderRadius: 14,
+    backgroundColor: colors.lightGreen,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  filterText: {
+    fontFamily: FontFamily.poppins.medium,
+    color: colors.mainGreen,
   },
   loading: {
     color: 'white',

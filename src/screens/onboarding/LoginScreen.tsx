@@ -1,11 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import {
-  Text,
-  View,
-  KeyboardAvoidingView,
-  Platform,
-  Alert,
-} from 'react-native';
+import { Text, View, KeyboardAvoidingView, Platform } from 'react-native';
 import { styles } from '../../styles/LoginScreen.styles';
 import BottomSheet from '../../components/BottomSheet';
 import TextField from '../../components/TextField';
@@ -57,7 +51,7 @@ const LoginScreen = () => {
       style={styles.container}
     >
       <Text style={styles.welcome}>Welcome</Text>
-      <BottomSheet>
+      <BottomSheet style={styles.bottomSheet}>
         <TextField
           label="Username Or Email"
           placeholder="example@example.com"

@@ -17,6 +17,9 @@ export const styles = StyleSheet.create({
     marginBottom: 65,
     includeFontPadding: false,
   },
+  bottomSheet: {
+    paddingBottom: '40%',
+  },
   textFieldEmail: {
     paddingHorizontal: 36,
     paddingTop: 90,

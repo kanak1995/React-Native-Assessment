@@ -112,7 +112,7 @@ const SignupScreen = () => {
       style={styles.container}
     >
       <Text style={styles.welcome}>Create Account</Text>
-      <BottomSheet>
+      <BottomSheet style={styles.bottomSheet}>
         <TextField
           // label="Username Or Email"
           placeholder="Enter Your First Name"

@@ -13,6 +13,10 @@ interface ProductState {
   loading: boolean;
   refreshing: boolean;
   hasMore: boolean;
+  minPrice: number | undefined;
+  maxPrice: number | undefined;
+  sortBy: 'price' | undefined;
+  sortOrder: 'asc' | 'desc';
 
   fetchProducts: (reset?: boolean) => Promise<void>;
   fetchCategories: () => Promise<void>;
@@ -21,6 +25,13 @@ interface ProductState {
   loadMore: () => Promise<void>;
   onRefresh: () => Promise<void>;
   updateLocalStock: (productId: string, delta: number) => void;
+  setFilters: (filters: {
+    minPrice?: number;
+    maxPrice?: number;
+    sortBy?: 'price';
+    sortOrder?: 'asc' | 'desc';
+  }) => void;
+  clearFilters: () => void;
 }
 
 export const useProductStore = create<ProductState>((set, get) => ({
@@ -32,9 +43,22 @@ export const useProductStore = create<ProductState>((set, get) => ({
   loading: false,
   refreshing: false,
   hasMore: true,
+  minPrice: undefined,
+  maxPrice: undefined,
+  sortBy: undefined,
+  sortOrder: 'asc',
 
   fetchProducts: async (reset = false) => {
-    const { page, search, selectedCategory, loading, products } = get();
+    const {
+      page,
+      search,
+      selectedCategory,
+      minPrice,
+      maxPrice,
+      sortBy,
+      sortOrder,
+      products,
+    } = get();
     const currentPage = reset ? 1 : page;
 
     if (reset) set({ loading: true, products: [], page: 1, hasMore: true });
@@ -45,6 +69,10 @@ export const useProductStore = create<ProductState>((set, get) => ({
         limit: 10,
         q: search,
         category: selectedCategory,
+        minPrice,
+        maxPrice,
+        sort: sortBy,
+        order: sortOrder,
       });
 
       set({
@@ -85,11 +113,23 @@ export const useProductStore = create<ProductState>((set, get) => ({
     set({ page: nextPage, loading: true });
 
     try {
+      const {
+        search,
+        selectedCategory,
+        minPrice,
+        maxPrice,
+        sortBy,
+        sortOrder,
+      } = get();
       const res = await getProducts({
         page: nextPage,
         limit: 10,
-        q: get().search,
-        category: get().selectedCategory,
+        q: search,
+        category: selectedCategory,
+        minPrice,
+        maxPrice,
+        sort: sortBy,
+        order: sortOrder,
       });
 
       set({
@@ -113,5 +153,21 @@ export const useProductStore = create<ProductState>((set, get) => ({
         p.id === productId ? { ...p, stock: Math.max(0, p.stock + delta) } : p,
       ),
     }));
+  },
+
+  setFilters: filters => {
+    set({ ...filters, page: 1 });
+    get().fetchProducts(true);
+  },
+
+  clearFilters: () => {
+    set({
+      minPrice: undefined,
+      maxPrice: undefined,
+      sortBy: undefined,
+      sortOrder: 'asc',
+      page: 1,
+    });
+    get().fetchProducts(true);
   },
 }));

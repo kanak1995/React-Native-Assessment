@@ -8,10 +8,14 @@ import { useProductStore } from '../../../store/productStore';
 import SearchBar from '../../../components/SearchBar';
 import CategoryPicker from '../../../components/CategoryPicker';
 import ProductCard from '../../../components/ProductCard';
+import FilterModal from '../../../components/FilterModal';
+import { TouchableOpacity } from 'react-native';
+import { colors } from '../../../theme/colors';
 
 const HomeScreen = () => {
   const navigation = useNavigation<NavigationProp<any>>();
   const [showCategoryModal, setShowCategoryModal] = useState(false);
+  const [showFilterModal, setShowFilterModal] = useState(false);
 
   const {
     products,
@@ -66,6 +70,7 @@ const HomeScreen = () => {
             : 'All'
         }
         onCategoryPress={() => setShowCategoryModal(true)}
+        onFilterPress={() => setShowFilterModal(true)}
       />
 
       <FlatList
@@ -103,6 +108,10 @@ const HomeScreen = () => {
           setCategory(id);
           setShowCategoryModal(false);
         }}
+      />
+      <FilterModal
+        visible={showFilterModal}
+        onClose={() => setShowFilterModal(false)}
       />
     </View>
   );

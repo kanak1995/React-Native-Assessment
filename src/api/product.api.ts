@@ -10,6 +10,8 @@ interface GetProductsParams {
   sort?: 'price';
   order?: 'asc' | 'desc';
   ids?: string[];
+  minPrice?: number;
+  maxPrice?: number;
 }
 
 export async function getProducts({
@@ -20,6 +22,8 @@ export async function getProducts({
   sort,
   order = 'asc',
   ids,
+  minPrice,
+  maxPrice,
 }: GetProductsParams): Promise<ProductModel[]> {
   const start = (page - 1) * limit;
 
@@ -32,6 +36,8 @@ export async function getProducts({
 
   if (q) params.append('title_like', q);
   if (category) params.append('category', category);
+  if (minPrice !== undefined) params.append('price_gte', String(minPrice));
+  if (maxPrice !== undefined) params.append('price_lte', String(maxPrice));
   if (ids && ids.length > 0) {
     ids.forEach(id => params.append('id', id));
   }

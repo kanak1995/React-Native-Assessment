@@ -1,17 +1,22 @@
-import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, StyleProp, ViewStyle } from 'react-native';
 import { colors } from '../theme/colors';
 
 type BottomSheetProps = {
   height?: number | `${number}%`;
   children?: React.ReactNode;
+  style?: StyleProp<ViewStyle>;
 };
 
 const BottomSheet: React.FC<BottomSheetProps> = ({
-  height = '67%',
+  height,
   children,
+  style,
 }) => {
-  return <View style={[styles.container, { height }]}>{children}</View>;
+  return (
+    <View style={[styles.container, height ? { height } : {}, style]}>
+      {children}
+    </View>
+  );
 };
 
 const styles = StyleSheet.create({
