@@ -1,8 +1,7 @@
 import { useAuthStore } from '../src/store/authStore';
-import { loginApi, registerApi } from '../src/api/auth.api';
+import { loginApi } from '../src/api/auth.api';
 import {
   saveToken,
-  saveUserId,
   clearToken,
   getToken,
   getUserId,

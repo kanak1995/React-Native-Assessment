@@ -74,7 +74,7 @@ const ProductDetailsScreen = () => {
 
         <View style={styles.content}>
           <View style={styles.priceRow}>
-            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+            <View style={styles.childContent}>
               <Text style={styles.price}>₹{product.price}</Text>
 
               <TouchableOpacity
@@ -88,7 +88,7 @@ const ProductDetailsScreen = () => {
                 />
               </TouchableOpacity>
             </View>
-            <Text style={[styles.stock, product.stock < 5 && { color: 'red' }]}>
+            <Text style={[styles.stock, product.stock < 5 && styles.lowStock]}>
               {product.stock > 0 ? `${product.stock} in stock` : 'Out of Stock'}
             </Text>
           </View>
@@ -131,10 +131,7 @@ const ProductDetailsScreen = () => {
         title={product.stock === 0 ? 'Out of stock' : 'Add to cart'}
         onPress={addToCartHandler}
         variant="solid"
-        style={{
-          ...styles.addButton,
-          opacity: canAddToCart ? 1 : 0.5,
-        }}
+        style={[styles.addButton, !canAddToCart && styles.disabledAddButton]}
         disabled={!canAddToCart}
         accessibilityLabel={
           product.stock === 0 ? 'Product out of stock' : 'Add to cart'

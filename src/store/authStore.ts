@@ -13,13 +13,13 @@ interface AuthState {
   user: User | null;
   token: string | null;
   status: 'loading' | 'authenticated' | 'unauthenticated';
-  
+
   initialize: () => Promise<void>;
   login: (email: string, password: string) => Promise<void>;
   logout: () => Promise<void>;
 }
 
-export const useAuthStore = create<AuthState>((set) => ({
+export const useAuthStore = create<AuthState>(set => ({
   user: null,
   token: null,
   status: 'loading',
@@ -35,15 +35,17 @@ export const useAuthStore = create<AuthState>((set) => ({
       }
     } catch (error) {
       set({ status: 'unauthenticated' });
+      debugLog(error);
     }
   },
 
   login: async (email, password) => {
-    debugLog(email, password)
+    debugLog(email, password);
     const res = await loginApi(email.toLocaleLowerCase(), password);
+    debugLog(res);
     await saveToken(res.token);
     await saveUserId(res.user.id.toString());
-    
+
     set({
       token: res.token,
       user: res.user,

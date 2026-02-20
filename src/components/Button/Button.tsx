@@ -5,6 +5,7 @@ import {
   ViewStyle,
   TextStyle,
   ButtonProps,
+  StyleProp,
 } from 'react-native';
 import { styles } from './Button.styles';
 
@@ -16,8 +17,8 @@ interface ButtonsProps extends ButtonProps {
   title: string;
   onPress?: () => void;
   variant?: ButtonVariant;
-  style?: ViewStyle;
-  textStyle?: TextStyle;
+  style?: StyleProp<ViewStyle>;
+  textStyle?: StyleProp<TextStyle>;
   // width?: number;
   // height?: number;
 }

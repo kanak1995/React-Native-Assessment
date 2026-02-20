@@ -1,11 +1,5 @@
 import { useCartStore } from '../src/store/cartStore';
-import {
-  getCart,
-  addToCart,
-  updateCartItemQty,
-  removeFromCart,
-  clearCart,
-} from '../src/api/cart.api';
+import { getCart, addToCart, removeFromCart } from '../src/api/cart.api';
 import { getProductById, updateProductStock } from '../src/api/product.api';
 import { useProductStore } from '../src/store/productStore';
 

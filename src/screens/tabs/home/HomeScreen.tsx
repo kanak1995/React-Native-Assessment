@@ -9,8 +9,6 @@ import SearchBar from '../../../components/SearchBar';
 import CategoryPicker from '../../../components/CategoryPicker';
 import ProductCard from '../../../components/ProductCard';
 import FilterModal from '../../../components/FilterModal';
-import { TouchableOpacity } from 'react-native';
-import { colors } from '../../../theme/colors';
 
 const HomeScreen = () => {
   const navigation = useNavigation<NavigationProp<any>>();

@@ -1,21 +1,14 @@
 import { useState, useCallback } from 'react';
 import { OrderModel } from '../models/OrderModel';
 import { getOrders } from '../api/orders.api';
-import {
-  CommonActions,
-  NavigationProp,
-  useFocusEffect,
-  useNavigation,
-} from '@react-navigation/native';
+import { useFocusEffect } from '@react-navigation/native';
 import { useAuthStore } from '../store/authStore';
-import Screens from '../screens/Screen';
 
 export function useOrders() {
   const [orders, setOrders] = useState<OrderModel[]>([]);
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
   const [refreshing, setRefreshing] = useState(false);
-  const navigation = useNavigation<NavigationProp<any>>();
 
   const fetchOrders = useCallback(async (pageNo = 1) => {
     try {

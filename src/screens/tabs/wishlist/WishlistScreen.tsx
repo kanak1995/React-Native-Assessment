@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useState, useCallback } from 'react';
 import { View, FlatList, Text, ActivityIndicator } from 'react-native';
 import {
   useNavigation,
@@ -10,7 +10,7 @@ import { useWishlistStore } from '../../../store/wishlistStore';
 import { getProducts } from '../../../api/product.api';
 import { ProductModel } from '../../../models/ProductModel';
 import ProductCard from '../../../components/ProductCard';
-import { styles } from '../../../styles/HomeScreen.styles';
+import { styles } from '../../../styles/WishlistScreen.styles';
 import { colors } from '../../../theme/colors';
 
 const WishlistScreen = () => {
@@ -19,7 +19,7 @@ const WishlistScreen = () => {
   const [products, setProducts] = useState<ProductModel[]>([]);
   const [loading, setLoading] = useState(false);
 
-  const fetchWishlistProducts = async () => {
+  const fetchWishlistProducts = useCallback(async () => {
     if (wishlistIds.length === 0) {
       setProducts([]);
       return;
@@ -37,32 +37,22 @@ const WishlistScreen = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [wishlistIds]);
 
   useFocusEffect(
     useCallback(() => {
       fetchWishlistProducts();
-    }, [wishlistIds]),
+    }, [fetchWishlistProducts]),
   );
 
   return (
     <View style={styles.container}>
-      <View style={{ marginTop: 60, paddingHorizontal: 16, marginBottom: 10 }}>
-        <Text
-          style={{
-            color: 'white',
-            fontSize: 24,
-            fontFamily: 'Poppins-SemiBold',
-          }}
-        >
-          My Wishlist
-        </Text>
+      <View style={styles.header}>
+        <Text style={styles.title}>My Wishlist</Text>
       </View>
 
       {loading && products.length === 0 ? (
-        <View
-          style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}
-        >
+        <View style={styles.loadingContainer}>
           <ActivityIndicator color={colors.mainGreen} />
         </View>
       ) : (

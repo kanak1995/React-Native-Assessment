@@ -77,7 +77,7 @@
       "reviewsCount": 132,
       "category": "apparel",
       "brand": "Acme",
-      "stock": 35
+      "stock": 34
     },
     {
       "id": "p_1003",
@@ -106,7 +106,7 @@
       "reviewsCount": 96,
       "category": "apparel",
       "brand": "DenimCo",
-      "stock": 26
+      "stock": 25
     },
     {
       "id": "p_1004",
@@ -1777,6 +1777,32 @@
       "qty": 1,
       "userId": 2,
       "id": 1
+    },
+    {
+      "productId": "p_1002",
+      "title": "Premium Polo Shirt",
+      "thumbnail": "https://picsum.photos/400/400?random=61",
+      "price": 29.99,
+      "options": {
+        "color": "white",
+        "size": "M"
+      },
+      "qty": 1,
+      "userId": 2,
+      "id": 2
+    },
+    {
+      "productId": "p_1003",
+      "title": "Slim Fit Jeans",
+      "thumbnail": "https://picsum.photos/400/400?random=4",
+      "price": 49.99,
+      "options": {
+        "color": "navy",
+        "size": "34"
+      },
+      "qty": 1,
+      "userId": 2,
+      "id": 3
     }
   ],
   "orders": [

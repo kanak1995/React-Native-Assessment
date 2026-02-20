@@ -32,6 +32,10 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-between',
     marginBottom: 12,
   },
+  childContent: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
   price: {
     fontSize: 22,
     color: colors.mainGreen,
@@ -44,6 +48,9 @@ export const styles = StyleSheet.create({
     fontFamily: FontFamily.poppins.medium,
     color: colors.mainGreen,
     fontSize: 14,
+  },
+  lowStock: {
+    color: 'red',
   },
   optionGroup: {
     marginBottom: 12,
@@ -80,6 +87,9 @@ export const styles = StyleSheet.create({
     marginBottom: 20,
     alignSelf: 'center',
     width: '80%',
+  },
+  disabledAddButton: {
+    opacity: 0.5,
   },
 
   dotsContainer: {

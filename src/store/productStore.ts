@@ -3,6 +3,7 @@ import { ProductModel } from '../models/ProductModel';
 import { CategoryModel } from '../models/CategoryModel';
 import { getProducts } from '../api/product.api';
 import { getCategories } from '../api/category.api';
+import { debugLog } from '../../logger';
 
 interface ProductState {
   products: ProductModel[];
@@ -83,6 +84,7 @@ export const useProductStore = create<ProductState>((set, get) => ({
       });
     } catch (error) {
       set({ loading: false, refreshing: false });
+      debugLog(error);
     }
   },
 
@@ -139,6 +141,7 @@ export const useProductStore = create<ProductState>((set, get) => ({
       });
     } catch (error) {
       set({ loading: false });
+      debugLog(error);
     }
   },
 
